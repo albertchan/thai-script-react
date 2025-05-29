@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# learn-thai-script
+
+I want to learn Thai because I like Thai girls.
+
+In order to learn the Thai language better, I figured I should learn to read Thai. There are wonderful tools and apps for learning the Thai script but most of them have shitty user experiences. That's why I'm making my own.
+
+This *thing* is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
