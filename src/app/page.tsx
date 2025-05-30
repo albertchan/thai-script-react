@@ -1,94 +1,32 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+      <main className="row">
+        <div>
+          <h1 className={styles.title}>Learn<br />Thai Script</h1>
+          <div className={styles.columns}>
+            <div>
+              <p>
+                I want to learn Thai because I like Thai girls.
+              </p>
+              <p>
+                In order to improve my Thai language skills, I figured I should learn to read and write Thai. Reading Thai requires learning the Thai script or alphabet. There are wonderful tools and apps for learning the Thai script but most of them have shitty user experiences. That's why I've made my own: this site.
+              </p>
+              <p>
+                I created Learn Thai Script mostly for my own benefit but I guess it could help other Thai learners as well. The focus here is to study the Thai script. It's not a complete solution for learning how to speak Thai. Learning a language also requires knowing the culture, vocabulary, grammar, and pronunciation. Some of these aspects are provided here in small doses, mainly to support the learning of the script.
+              </p>
+            </div>
+          </div>
         </div>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className={`${styles.footer} row`}>
+        <p>
+          © {currentYear} Albert Chan
+        </p>
       </footer>
     </div>
   );
