@@ -1,21 +1,34 @@
 :root {
-  --background: #ffffff;
+  --background: #F3F1ED;
   --foreground: #171717;
+  --foreground-alt: #171717;
+  --link-hover-color: #FF9900;
   --font-size: 16px;
+  --font-size-glyph: 1.5rem;
   --line-height: 1.5;
+  --line-width: 1px;
   --grid-color: #555;
+  --grid-gap: 3rem;
+  --cell-size: 4rem;
   --header-height: 48px;
+  --row-max-width: 64rem;
   --row-padding: 4rem;
   --row-padding-vertical: var(--row-padding);
   --spacingv: 0.75rem;
+  --field-height: 24px;
+  --field-width: 90px;
+  --field-margin: 12px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --foreground-alt: #858585;
   }
 }
+
+/* Base */
 
 html,
 body {
@@ -43,16 +56,90 @@ body {
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
+    text-decoration-style: dotted;
+
+  &:hover {
+    color: var(--link-hover-color);
+    text-decoration-style: dashed;
+  }
 }
+
+a.active {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+a.mid:not(.active, .highlight) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+a.high:not(.active, .highlight) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+a.highlight:not(.active) {
+  background-color: var(--link-hover-color);
+}
+
+/* Typography */
 
 p {
   margin-bottom: calc(var(--spacingv) * 2);
 }
 
 h1 {
+  font-size: calc(100vw / 12);
   font-weight: 600;
 }
+
+h2 {
+  font-size: calc(2rem + 100vw / 40);
+}
+
+h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: calc(1.2rem + 100vw / 64);
+}
+
+h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+li {
+  margin: 0 0 0.5rem 1rem;
+}
+
+figcaption {
+  color: var(--foreground-alt);
+}
+
+/* Tables */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  tr > th {
+    padding: 0.75rem 0.5rem;
+    border: var(--line-width) solid var(--foreground);
+  }
+
+  tr > td {
+    padding: 0.4rem;
+    text-align: left;
+    border: var(--line-width) solid var(--foreground);
+  }
+
+  .glyph {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+/* Theme */
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -60,23 +147,38 @@ h1 {
   }
 }
 
+/* Layout */
+
+.page {
+  width: 100%;
+}
+
 .row {
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
   padding: var(--row-padding-vertical) var(--row-padding);
+  max-width: var(--row-max-width);
 
-  > * {
+  > div {
     width: 100%;
   }
 }
 
 .columns {
   column-width: 22em;
-  column-count: 4;
-  column-gap: 3em;
+  column-count: 2;
+  column-gap: var(--grid-gap);
   column-fill: balance;
+  margin-bottom: 1rem;
 }
 
 .grid {
   display: grid;
+}
+
+.font-glyph {
+  font-size: var(--font-size-glyph);
 }

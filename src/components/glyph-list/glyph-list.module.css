@@ -1,0 +1,30 @@
+.glyphList {
+  position: relative;
+
+  .clipview {
+    position: relative;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(var(--cell-size), 1fr) );
+    gap: var(--line-width);
+    font-size: calc(var(--cell-size) / 2.5);
+
+    > * {
+      height: var(--cell-size);
+      line-height: calc(var(--cell-size) + 1px);
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 0 0 var(--line-width) var(--grid-color);
+      overflow: hidden;
+      scroll-padding-top: 0;
+    }
+  }
+
+  .meta {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    opacity: 0.5;
+  }
+}

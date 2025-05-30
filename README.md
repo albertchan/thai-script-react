@@ -8,7 +8,14 @@ This *thing* is a [Next.js](https://nextjs.org) project bootstrapped with [`crea
 
 ## Getting Started
 
-First, run the development server:
+For local development, first create an environment variable file `.env.local` with the following content:
+
+```
+PROTOCOL_SCHEME=http://
+VERCEL_URL=localhost:3000
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -40,3 +47,16 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Resources
+
+- https://en.wikipedia.org/wiki/Thai_script
+- https://en.wikipedia.org/wiki/Thai_language
+- https://en.wikipedia.org/wiki/Royal_Thai_General_System_of_Transcription
+- https://en.wikipedia.org/wiki/Help:IPA/Thai
+- https://en.wiktionary.org/wiki/Appendix:Unicode/Thai
+- https://www.unicode.org/charts/PDF/U0E00.pdf
+- http://www.thai-language.com/ref/vowels
+- https://www.leskoff.com/s01763-0
+- https://joeymckenzie.tech/blog/react-data-fetching-with-rxjs
+- https://github.com/jherr/rxjs-pokemon
