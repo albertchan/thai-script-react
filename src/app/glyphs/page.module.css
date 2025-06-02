@@ -1,0 +1,63 @@
+.page {
+  --grid-color: var(--foreground);
+  --foreground-color: var(--foreground);
+  --font-weight: 400;
+  color: var(--foreground-color);
+  width: 100%;
+  /* min-height: 100svh; */
+
+  h2 {
+    padding: 0 var(--row-padding);
+    padding-bottom: 1rem;
+  }
+}
+
+.glyphGrid {
+  --line-width: 1px;
+  --cell-size: 4rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  position: relative;
+  max-width: 100vw;
+  box-sizing: border-box;
+  gap: var(--line-width);
+  flex: 1 0 100%;
+}
+
+.inspector {
+  position: sticky;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  top: var(--header-height);
+  left: 0;
+  height: 100%;
+  max-height: calc(100vh - var(--header-height));
+  box-shadow: 0 0 0 var(--line-width) var(--grid-color);
+}
+
+.glyphList {
+  position: relative;
+
+  .clipview {
+    position: relative;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(var(--cell-size), 1fr) );
+    gap: var(--line-width);
+    font-size: calc(var(--cell-size) / 2);
+
+    > * {
+      height: var(--cell-size);
+      line-height: calc(var(--cell-size) + 1px);
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 0 0 var(--line-width) var(--grid-color);
+      overflow: hidden;
+      scroll-padding-top: 0;
+    }
+  }
+}
+

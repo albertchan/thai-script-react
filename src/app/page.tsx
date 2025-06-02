@@ -1,8 +1,6 @@
 import styles from "./page.module.css";
 
 export default function Home() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <div className={styles.page}>
       <main className="row">
@@ -23,11 +21,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className={`${styles.footer} row`}>
-        <p>
-          © {currentYear} Albert Chan
-        </p>
-      </footer>
     </div>
   );
 }

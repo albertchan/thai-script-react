@@ -1,0 +1,50 @@
+.header {
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  padding: 0;
+  overflow: hidden;
+  z-index: 2;
+  align-items: stretch;
+  background: var(--background-color);
+  font-size: 0.875rem;
+
+  h4 {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    margin: 0;
+  }
+
+  > div {
+    display: flex;
+    flex: 1 0 100%;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+
+    > * {
+      padding: 0 var(--row-padding)
+    }
+  }
+}
+
+.scrollReveal {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.menu {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
