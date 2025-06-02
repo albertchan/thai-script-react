@@ -3,6 +3,7 @@ import { BehaviorSubject } from "rxjs";
 import ThaiGlyph from "./models/thai-glyph";
 
 const listGlyph$ = new BehaviorSubject<ThaiGlyph[]>([]);
+const selectedId$ = new BehaviorSubject<number>(1);
 
 // Get glyphs from database
 fetch("/thai-script.json")
@@ -11,6 +12,7 @@ fetch("/thai-script.json")
 
 const GlyphsContext = createContext({
   listGlyph$,
+  selectedId$,
 });
 
 export const useGlyphs = () => useContext(GlyphsContext);

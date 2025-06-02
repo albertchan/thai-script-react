@@ -44,3 +44,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## Resources
 
 - https://joeymckenzie.tech/blog/react-data-fetching-with-rxjs
+- https://github.com/jherr/rxjs-pokemon

@@ -1,0 +1,24 @@
+.inspector {
+  position: sticky;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  top: var(--header-height);
+  left: 0;
+  height: 100%;
+  max-height: calc(100vh - var(--header-height));
+  box-shadow: 0 0 0 var(--line-width) var(--grid-color);
+
+  .preview {
+    display: flex;
+    flex: 0 0 auto;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: var(--inspector-wght);
+    font-variation-settings: "opsz" var(--inspector-opsz);
+    border-left: var(--line-width) solid var(--grid-color);
+    user-select: all;
+  }
+}
