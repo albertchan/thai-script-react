@@ -19,6 +19,11 @@
     font-weight: var(--inspector-wght);
     font-variation-settings: "opsz" var(--inspector-opsz);
     border-left: var(--line-width) solid var(--grid-color);
-    user-select: all;
+  }
+
+  .canvas {
+    font-size: 40vw;
+    text-align: center;
+    line-height: 1.0;
   }
 }

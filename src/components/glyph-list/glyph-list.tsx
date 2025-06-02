@@ -1,26 +1,28 @@
 "use client"
 
 import { useObservableState } from "observable-hooks";
-import ThaiGlyph from "@/shared/models/thai-glyph";
 import { useGlyphs } from "@/shared/store";
+import ThaiGlyph from "@/shared/models/thai-glyph";
 import styles from "./glyph-list.module.css";
+import { useEffect } from "react";
 
-// interface GlyphListProps {
-//   glyphs: ThaiGlyph[]
-// }
+interface GlyphListProps {
+  glyphs: ThaiGlyph[],
+  selected: ThaiGlyph,
+}
 
-// export default function GlyphList({ glyphs }: GlyphListProps) {
-export default function GlyphList() {
-  const { listGlyph$, selectedId$, selectedGlyph$ } = useGlyphs();
-  const glyphs = useObservableState(listGlyph$);
-  const selectedId = useObservableState(selectedId$);
+export default function GlyphList({ glyphs }: GlyphListProps) {
+  const { selectedGlyph$ } = useGlyphs();
+  const selectedGlyph = useObservableState(selectedGlyph$);
 
-  if (glyphs.length > 0) {
-    selectedGlyph$.next(glyphs[selectedId$.value]);
-  }
+  // Initial
+  useEffect(() => {
+    if (!selectedGlyph$.value) {
+      selectedGlyph$.next(glyphs[0]);
+    }
+  })
 
   function handleClick(glyph: ThaiGlyph) {
-    selectedId$.next(glyph.id)
     selectedGlyph$.next(glyph)
   }
 
@@ -31,7 +33,7 @@ export default function GlyphList() {
           {glyphs.map((g: ThaiGlyph) => 
             <a key={g.id}
                href={`#${g.glyph}`}
-               className={selectedId == g.id ? 'active' : undefined}
+               className={selectedGlyph?.id == g.id ? 'active' : undefined}
                onClick={() => handleClick(g)}
             >
               {g.glyph}

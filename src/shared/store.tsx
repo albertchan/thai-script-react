@@ -3,16 +3,15 @@ import { BehaviorSubject } from "rxjs";
 import ThaiGlyph from "./models/thai-glyph";
 
 const listGlyph$ = new BehaviorSubject<ThaiGlyph[]>([]);
-const selectedId$ = new BehaviorSubject<number>(1);
-const selectedGlyph$ = new BehaviorSubject<ThaiGlyph | null>(null);
+const selectedGlyph$ = new BehaviorSubject<ThaiGlyph | undefined>(undefined);
 
-fetch("http://localhost:3000/api/glyphs")
-  .then((res) => res.json())
-  .then((data) => listGlyph$.next(data));
+// fetch("http://localhost:3000/api/glyphs")
+//   .then((res) => res.json())
+//   .then((data) => listGlyph$.next(data))
+//   .then(() => selectedGlyph$.next(listGlyph$.value[0]));
 
 const GlyphsContext = createContext({
   listGlyph$,
-  selectedId$,
   selectedGlyph$,
 });
 
