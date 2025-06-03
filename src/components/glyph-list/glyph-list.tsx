@@ -1,19 +1,21 @@
 "use client"
 
+import { map } from "rxjs";
 import { useObservableState } from "observable-hooks";
-import { useGlyphs } from "@/shared/store";
+import { useGlyphs, useOptions } from "@/shared/store";
 import ThaiGlyph from "@/shared/models/thai-glyph";
 import styles from "./glyph-list.module.css";
 import { useEffect } from "react";
 
 interface GlyphListProps {
   glyphs: ThaiGlyph[],
-  selected: ThaiGlyph,
 }
 
 export default function GlyphList({ glyphs }: GlyphListProps) {
-  const { selectedGlyph$ } = useGlyphs();
+  const { listGlyph$, selectedGlyph$ } = useGlyphs();
+  const { selectedFamily$ } = useOptions();
   const selectedGlyph = useObservableState(selectedGlyph$);
+  const selectedFamily = useObservableState(selectedFamily$);
 
   // Initial
   useEffect(() => {
@@ -21,6 +23,8 @@ export default function GlyphList({ glyphs }: GlyphListProps) {
       selectedGlyph$.next(glyphs[0]);
     }
   })
+
+  // listGlyph$.next(glyphs);
 
   function handleClick(glyph: ThaiGlyph) {
     selectedGlyph$.next(glyph)

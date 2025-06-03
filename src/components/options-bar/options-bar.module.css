@@ -1,0 +1,30 @@
+.options {
+  --field-height: 24px;
+  --field-width: 90px;
+  padding: 0 var(--row-padding) 1rem;
+  letter-spacing: 0.012em;
+
+  > * {
+    line-height: 18px;
+  }
+
+  label {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: var(--field-height);
+    font-size: 12px;
+
+    > :first-child {
+      flex: 0 0 auto;
+      text-align: left;
+      margin-right: 12px;
+    }
+
+    select {
+      min-width: var(--field-width);
+    }
+  }
+}

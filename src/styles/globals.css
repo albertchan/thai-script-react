@@ -78,12 +78,17 @@ h2 {
   }
 }
 
+.page {
+  width: 100%;
+}
+
 .row {
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   padding: var(--row-padding-vertical) var(--row-padding);
 
-  > * {
+  > div {
     width: 100%;
   }
 }

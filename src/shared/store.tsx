@@ -4,15 +4,16 @@ import ThaiGlyph from "./models/thai-glyph";
 
 const listGlyph$ = new BehaviorSubject<ThaiGlyph[]>([]);
 const selectedGlyph$ = new BehaviorSubject<ThaiGlyph | undefined>(undefined);
-
-// fetch("http://localhost:3000/api/glyphs")
-//   .then((res) => res.json())
-//   .then((data) => listGlyph$.next(data))
-//   .then(() => selectedGlyph$.next(listGlyph$.value[0]));
+const selectedFamily$ = new BehaviorSubject<string | undefined>(undefined);
 
 const GlyphsContext = createContext({
   listGlyph$,
   selectedGlyph$,
 });
 
+const OptionsContext = createContext({
+  selectedFamily$,
+})
+
 export const useGlyphs = () => useContext(GlyphsContext);
+export const useOptions = () => useContext(OptionsContext)
