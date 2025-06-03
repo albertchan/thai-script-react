@@ -8,6 +8,7 @@ export default interface ThaiGlyph {
   phonemeType: string;
   soundStart: string;
   soundEnd: string;
+  toneClass: string;
   url: string;
   data: Record<string, unknown>;
 }

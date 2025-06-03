@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./navbar.module.css";
 
 export default function Navbar() {
@@ -8,8 +9,10 @@ export default function Navbar() {
           <a>learn-thai-script</a>
         </h4>
         <div className={styles.menu}>
-          <a href="/glyphs">Glyphs</a>
-          <a href="#about">About</a>
+          <Link href="/">Home</Link>
+          <Link href="/glyphs">Glyphs</Link>
+          <Link href="/tone">Tone</Link>
+          <Link href="/about">About</Link>
         </div>
       </div>
     </header>

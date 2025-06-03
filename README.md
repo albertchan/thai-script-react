@@ -43,5 +43,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Resources
 
+- https://en.wikipedia.org/wiki/Thai_script
+- https://en.wikipedia.org/wiki/Thai_language
+- https://en.wikipedia.org/wiki/Royal_Thai_General_System_of_Transcription
+- https://www.unicode.org/charts/PDF/U0E00.pdf
 - https://joeymckenzie.tech/blog/react-data-fetching-with-rxjs
 - https://github.com/jherr/rxjs-pokemon

@@ -51,6 +51,14 @@ a.active {
   color: var(--background);
 }
 
+a.mid:not(.active) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+a.high:not(.active) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 p {
   margin-bottom: calc(var(--spacingv) * 2);
 }

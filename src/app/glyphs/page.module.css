@@ -4,7 +4,7 @@
   --font-weight: 400;
   color: var(--foreground-color);
   width: 100%;
-  /* min-height: 100svh; */
+  min-height: 100svh;
 
   h2 {
     padding: 0 var(--row-padding);

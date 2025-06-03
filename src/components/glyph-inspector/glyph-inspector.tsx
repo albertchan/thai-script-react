@@ -11,8 +11,17 @@ export default function GlyphInspector() {
   return (
     <div className={styles.inspector}>
       <div className={styles.toolbar}>
+        <div className={styles.details}>
+          <div className={styles.name}>{glyph?.name}</div>
+          <div className={styles.transcript}>{glyph?.transcript}</div>
+        </div>
+        <div className={styles.identification}>
+          <div className={styles.unicode}>{glyph?.unicode}</div>
+          <div className={styles.description}>{glyph?.description}</div>
+        </div>
       </div>
       <div className={styles.canvas}>
+        <div className={styles.toneClass}>{glyph?.toneClass}</div>
         {glyph?.glyph}
       </div>
     </div>

@@ -33,7 +33,7 @@ export default function GlyphList({ glyphs }: GlyphListProps) {
           {glyphs.map((g: ThaiGlyph) => 
             <a key={g.id}
                href={`#${g.glyph}`}
-               className={selectedGlyph?.id == g.id ? 'active' : undefined}
+               className={`${g.toneClass} ${selectedGlyph?.id == g.id ? 'active' : ''}`}
                onClick={() => handleClick(g)}
             >
               {g.glyph}
