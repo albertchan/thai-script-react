@@ -8,10 +8,10 @@ export default function OptionsBar() {
   const family = [
     { id: "all", name: "All" },
     { id: "consonant", name: "Consonants" },
-    { id: "vowels", name: "Vowesl" },
-    { id: "low", name: "Low" },
-    { id: "mid", name: "Mid" },
-    { id: "high", name: "High" },
+    { id: "mid", name: "Consonants (Mid)" },
+    { id: "high", name: "Consonants (High)" },
+    { id: "low", name: "Consonants (Low)" },
+    { id: "vowel", name: "Vowels" },
   ];
 
   // Initialize

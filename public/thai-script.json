@@ -120,7 +120,7 @@
     "transcript": "cho ching",
     "phonemeType": "consonant",
     "soundStart": "ch",
-    "soundEnd": "–",
+    "soundEnd": "-",
     "toneClass": "high",
     "url": "",
     "data": {}
@@ -386,7 +386,7 @@
     "transcript": "pho phueng",
     "phonemeType": "consonant",
     "soundStart": "ph",
-    "soundEnd": "–",
+    "soundEnd": "-",
     "toneClass": "high",
     "url": "",
     "data": {}
@@ -400,7 +400,7 @@
     "transcript": "fo fan",
     "phonemeType": "consonant",
     "soundStart": "f",
-    "soundEnd": "–",
+    "soundEnd": "-",
     "toneClass": "high",
     "url": "",
     "data": {}
@@ -470,7 +470,7 @@
     "transcript": "yo yak",
     "phonemeType": "consonant",
     "soundStart": "y",
-    "soundEnd": "– or n",
+    "soundEnd": "- or n",
     "toneClass": "low",
     "url": "",
     "data": {}
@@ -512,7 +512,7 @@
     "transcript": "wo waen",
     "phonemeType": "consonant",
     "soundStart": "w",
-    "soundEnd": "–",
+    "soundEnd": "-",
     "toneClass": "low",
     "url": "",
     "data": {}
@@ -568,7 +568,7 @@
     "transcript": "ho hip",
     "phonemeType": "consonant",
     "soundStart": "h",
-    "soundEnd": "–",
+    "soundEnd": "-",
     "toneClass": "high",
     "url": "",
     "data": {}
@@ -595,8 +595,8 @@
     "description": "basin, tub",
     "transcript": "o ang",
     "phonemeType": "consonant",
-    "soundStart": "–",
-    "soundEnd": "–",
+    "soundStart": "-",
+    "soundEnd": "-",
     "toneClass": "mid",
     "url": "",
     "data": {}
@@ -610,7 +610,7 @@
     "transcript": "ho nok huk",
     "phonemeType": "consonant",
     "soundStart": "h",
-    "soundEnd": "–",
+    "soundEnd": "-",
     "toneClass": "low",
     "url": "",
     "data": {}
@@ -830,7 +830,7 @@
     "unicode": "U+0E48",
     "glyph": " ่",
     "name": "ไม้เอก",
-    "description": "First of the Thai language's four tone marks",
+    "description": "First of four tone marks",
     "transcript": "mai ek, mái-èek",
     "phonemeType": "diacritic",
     "soundStart": "",
