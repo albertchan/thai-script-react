@@ -21,8 +21,13 @@ export default function GlyphInspector() {
         </div>
       </div>
       <div className={styles.canvas}>
-        <div className={styles.toneClass}>{glyph?.toneClass}</div>
-        {glyph?.glyph}
+        <div className={styles.toneClass}>
+          <div className={styles.tone}>{glyph?.toneClass}</div> 
+          <div className={styles.sound}>{glyph?.soundStart}, {glyph?.soundEnd}</div> 
+        </div>
+        <div className={styles.glyph}>{glyph?.glyph}</div>
+        <div className={styles.name}>{glyph?.name}</div>
+        <div className={styles.transcript}>{glyph?.transcript}</div>
       </div>
     </div>
   );
