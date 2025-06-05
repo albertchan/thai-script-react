@@ -9,12 +9,10 @@ export default async function Vowels() {
   const glyphs: ThaiGlyph[] = await res.json();
   const family: Option[] = [
     { id: "all", name: "All" },
-    { id: "consonant", name: "Consonants" },
-    { id: "mid", name: "Consonants (Mid)" },
-    { id: "high", name: "Consonants (High)" },
-    { id: "low", name: "Consonants (Low)" },
-    { id: "vowel", name: "Vowels" },
-    { id: "numeral", name: "Numerals" },
+    { id: "short", name: "Short" },
+    { id: "long", name: "long" },
+    { id: "diphthongs", name: "Diphthongs" },
+    { id: "extra", name: "Extra" },
   ];
 
   return (

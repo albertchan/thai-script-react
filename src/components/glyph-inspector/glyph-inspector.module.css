@@ -1,6 +1,7 @@
 .inspector {
   --inspector-width: calc(50vw - var(--row-padding)*2);
   --glyph-padding: 1rem;
+  --glyph-font-size: calc(3rem + 10vw);
   --toolbar-height: calc(var(--cell-size) + 1px);
 
   position: sticky;
@@ -49,7 +50,6 @@
   }
 
   .canvas {
-    --font-size: calc(3rem + 10vw);
     position: relative;
     display: flex;
     align-items: center;
@@ -57,13 +57,13 @@
     flex-direction: column;
     flex: 1 1 auto;
     height: var(--inspector-width);
-    max-height: var(--inspector-width);
+    max-height: calc((var(--row-max-width) - var(--row-padding) * 2) / 2);
     text-align: center;
 
     .glyph {
       padding-bottom: var(--glyph-padding);
       line-height: 1;
-      font-size: calc(1.5rem + 10vw);
+      font-size: calc(1.2rem + 8vw);
     }
 
     .name {
