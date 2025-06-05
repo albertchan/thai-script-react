@@ -12,6 +12,7 @@ export default function OptionsBar() {
     { id: "high", name: "Consonants (High)" },
     { id: "low", name: "Consonants (Low)" },
     { id: "vowel", name: "Vowels" },
+    { id: "numeral", name: "Numerals" },
   ];
 
   // Initialize

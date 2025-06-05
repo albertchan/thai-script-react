@@ -11,8 +11,9 @@ export default function Navbar() {
         <div className={styles.menu}>
           <Link href="/">Home</Link>
           <Link href="/glyphs">Glyphs</Link>
+          <Link href="/consonants">Consonants</Link>
+          <Link href="/vowels">Vowels</Link>
           <Link href="/tone">Tone</Link>
-          <Link href="/about">About</Link>
         </div>
       </div>
     </header>

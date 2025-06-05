@@ -49,6 +49,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - https://en.wikipedia.org/wiki/Help:IPA/Thai
 - https://en.wiktionary.org/wiki/Appendix:Unicode/Thai
 - https://www.unicode.org/charts/PDF/U0E00.pdf
+- http://www.thai-language.com/ref/vowels
 - https://www.leskoff.com/s01763-0
 - https://joeymckenzie.tech/blog/react-data-fetching-with-rxjs
 - https://github.com/jherr/rxjs-pokemon
