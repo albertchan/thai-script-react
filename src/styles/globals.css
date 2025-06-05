@@ -80,13 +80,13 @@ h1 {
 }
 
 h2 {
-  font-size: calc(2rem + 100vw / 30);
+  font-size: calc(2rem + 100vw / 40);
 }
 
 h3 {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  font-size: calc(1.2rem + 100vw / 60);
+  font-size: calc(1.2rem + 100vw / 64);
 }
 
 h4 {

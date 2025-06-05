@@ -1,11 +1,15 @@
 .inspector {
+  /* --inspector-width: calc((100vw - var(--row-padding) * 2) / 2); */
+  --inspector-width: calc(50vw - var(--row-padding)*2);
+  --glyph-padding: 1rem;
+  --toolbar-height: calc(var(--cell-size) + 1px);
+
   position: sticky;
   display: grid;
   grid-template-rows: auto 1fr;
   top: var(--header-height);
   left: 0;
   height: 100%;
-  max-height: calc(100vh - var(--header-height));
   box-shadow: 0 0 0 var(--line-width) var(--grid-color);
 
   .preview {
@@ -23,7 +27,7 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    height: var(--cell-size);
+    height: var(--toolbar-height);
     padding: 0 1rem 0 1rem;
     border-bottom: var(--line-width) solid var(--grid-color);
     overflow: hidden;
@@ -46,20 +50,22 @@
   }
 
   .canvas {
-    --font-size: calc(4rem + 20vw);
+    --font-size: calc(3rem + 10vw);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     flex: 1 1 auto;
-    min-height: calc(var(--cell-size) + var(--font-size) + 20vw);
-    font-size: var(--font-size);
+    max-width: var(--inspector-width);
+    height: var(--inspector-width);
+    max-height: var(--inspector-width);
     text-align: center;
-    line-height: 1.0;
 
     .glyph {
-      padding-bottom: 2rem;
+      padding-bottom: var(--glyph-padding);
+      line-height: 1;
+      font-size: calc(1.5rem + 15vw);
     }
 
     .name {

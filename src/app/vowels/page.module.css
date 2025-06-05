@@ -1,0 +1,10 @@
+.glyphGrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  position: relative;
+  max-width: 100vw;
+  box-sizing: border-box;
+  gap: var(--line-width);
+  flex: 1 0 100%;
+}

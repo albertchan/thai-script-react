@@ -58,7 +58,6 @@ export default function GlyphList({ glyphs }: GlyphListProps) {
           )}
         </div>
       </div>
-      <div className={styles.meta}>Count: {filteredGylphs.length}</div>
     </div>
   );
 }

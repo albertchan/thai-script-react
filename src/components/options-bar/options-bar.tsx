@@ -1,22 +1,15 @@
 "use client"
 
 import { useOptions } from "@/shared/store";
+import Option from "@/shared/models/option";
 import styles from "./options-bar.module.css";
 
-export default function OptionsBar() {
-  const { selectedFamily$ } = useOptions();
-  const family = [
-    { id: "all", name: "All" },
-    { id: "consonant", name: "Consonants" },
-    { id: "mid", name: "Consonants (Mid)" },
-    { id: "high", name: "Consonants (High)" },
-    { id: "low", name: "Consonants (Low)" },
-    { id: "vowel", name: "Vowels" },
-    { id: "numeral", name: "Numerals" },
-  ];
+interface OptionsBarProps {
+  options: Option[],
+}
 
-  // Initialize
-  selectedFamily$.next(family[0].id)
+export default function OptionsBar({ options }: OptionsBarProps) {
+  const { selectedFamily$ } = useOptions();
 
   function handleChange(selected: string) {
     selectedFamily$.next(selected)
@@ -27,7 +20,7 @@ export default function OptionsBar() {
       <label>
         <span>Family</span>
         <select name="family" onChange={(e) => handleChange(e.target.value)}>
-          {family.map((f) =>
+          {options.map((f) =>
             <option key={f.id} value={f.id}>{f.name}</option>
           )}
         </select>
