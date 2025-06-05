@@ -11,10 +11,3 @@
   letter-spacing: -0.03rem;
   line-height: 1.0;
 }
-
-.columns {
-  column-width: 22em;
-  column-count: 2;
-  column-gap: 3em;
-  column-fill: balance;
-}

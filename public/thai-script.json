@@ -625,9 +625,13 @@
     "phonemeType": "vowel",
     "soundStart": "",
     "soundEnd": "",
-    "toneClass": "long",
+    "toneClass": "short",
     "url": "",
-    "data": {}
+    "data": {
+      "sort": {
+        "vowel": 1
+      }
+    }
   },
   {
     "id": 46,
@@ -635,13 +639,17 @@
     "glyph": " ั",
     "name": "ไม้หันอากาศ, ไม้ผัด, หางกังหัน",
     "description": "",
-    "transcript": "mai han akat, mai phat, mai kanghan",
+    "transcript": "mai han akat, mai phat, mai kanghan, sà-rà-aa",
     "phonemeType": "vowel",
     "soundStart": "",
     "soundEnd": "",
-    "toneClass": "",
+    "toneClass": "short",
     "url": "",
-    "data": {}
+    "data": {
+      "sort": {
+        "vowel": 2
+      }
+    }
   },
   {
     "id": 47,
@@ -649,13 +657,17 @@
     "glyph": "า",
     "name": "ลากข้าง",
     "description": "lak khang",
-    "transcript": "",
+    "transcript": "sà-rà-aa",
     "phonemeType": "vowel",
     "soundStart": "",
     "soundEnd": "",
-    "toneClass": "",
+    "toneClass": "long",
     "url": "",
-    "data": {}
+    "data": {
+      "sort": {
+        "vowel": 3
+      }
+    }
   },
   {
     "id": 48,
@@ -681,9 +693,13 @@
     "phonemeType": "vowel",
     "soundStart": "",
     "soundEnd": "",
-    "toneClass": "",
+    "toneClass": "short",
     "url": "",
-    "data": {}
+    "data": {
+      "sort": {
+        "vowel": 0
+      }
+    }
   },
   {
     "id": 50,
@@ -691,7 +707,7 @@
     "glyph": " ี",
     "name": "ฝนทอง, สระอี",
     "description": "",
-    "transcript": "",
+    "transcript": "sà-rà-li",
     "phonemeType": "vowel",
     "soundStart": "",
     "soundEnd": "",
@@ -717,7 +733,7 @@
     "id": 52,
     "unicode": "U+0E37",
     "glyph": " ื",
-    "name": "ฟันหนู, สระอือ.",
+    "name": "ฟันหนู, สระอือ",
     "description": "",
     "transcript": "",
     "phonemeType": "vowel",
@@ -737,7 +753,7 @@
     "phonemeType": "vowel",
     "soundStart": "",
     "soundEnd": "",
-    "toneClass": "",
+    "toneClass": "short",
     "url": "",
     "data": {}
   },
@@ -751,7 +767,7 @@
     "phonemeType": "vowel",
     "soundStart": "",
     "soundEnd": "",
-    "toneClass": "",
+    "toneClass": "long",
     "url": "",
     "data": {}
   },
@@ -779,7 +795,7 @@
     "phonemeType": "vowel",
     "soundStart": "",
     "soundEnd": "",
-    "toneClass": "",
+    "toneClass": "long",
     "url": "",
     "data": {}
   },
@@ -793,7 +809,7 @@
     "phonemeType": "vowel",
     "soundStart": "",
     "soundEnd": "",
-    "toneClass": "",
+    "toneClass": "long",
     "url": "",
     "data": {}
   },
@@ -827,6 +843,20 @@
   },
   {
     "id": 60,
+    "unicode": "U+0E47",
+    "glyph": " ็",
+    "name": "ไม้ไต่คู้",
+    "description": "",
+    "transcript": "mai taikhu",
+    "phonemeType": "vowel",
+    "soundStart": "",
+    "soundEnd": "",
+    "toneClass": "",
+    "url": "",
+    "data": {}
+  },
+  {
+    "id": 61,
     "unicode": "U+0E48",
     "glyph": " ่",
     "name": "ไม้เอก",
@@ -840,7 +870,7 @@
     "data": {}
   },
   {
-    "id": 61,
+    "id": 62,
     "unicode": "U+0E49",
     "glyph": " ้",
     "name": "ไม้โท",
@@ -854,7 +884,7 @@
     "data": {}
   },
   {
-    "id": 62,
+    "id": 63,
     "unicode": "U+0E4A",
     "glyph": " ๊",
     "name": "ไม้ตรี",
@@ -868,7 +898,7 @@
     "data": {}
   },
   {
-    "id": 63,
+    "id": 64,
     "unicode": "U+0E4B",
     "glyph": " ๋",
     "name": "ไม้จัตวา",

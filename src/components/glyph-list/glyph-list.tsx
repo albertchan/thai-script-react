@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react";
 import { map } from "rxjs";
 import { useObservableState } from "observable-hooks";
 import { useGlyphs, useOptions } from "@/shared/store";
@@ -17,9 +18,11 @@ export default function GlyphList({ glyphs }: GlyphListProps) {
   const selectedGlyph = useObservableState(selectedGlyph$);
 
   // Initialize
-  if (!selectedGlyph$.value) {
-    selectedGlyph$.next(glyphs[0]);
-  }
+  useEffect(() => {
+    if (!selectedGlyph$.value) {
+      selectedGlyph$.next(glyphs[0]);
+    }
+  });
 
   const [filteredGylphs] = useObservableState(() =>
     selectedFamily$.pipe(

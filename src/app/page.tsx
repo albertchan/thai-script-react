@@ -5,7 +5,7 @@ export default function Home() {
     <main className="row">
       <div>
         <h1 className={styles.title}>Learn<br />Thai Script</h1>
-        <div className={styles.columns}>
+        <div className="columns">
           <div>
             <p>
               I want to learn Thai because I like Thai girls.
