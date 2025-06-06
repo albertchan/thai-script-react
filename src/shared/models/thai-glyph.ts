@@ -11,4 +11,6 @@ export default interface ThaiGlyph {
   toneClass: string;
   url: string;
   data: Record<string, unknown>;
+  isActive?: boolean;
+  isGroup?: boolean;
 }

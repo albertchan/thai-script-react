@@ -57,17 +57,21 @@ a {
   }
 }
 
-a.active {
+a.active:not(.highlight) {
   background-color: var(--foreground);
   color: var(--background);
 }
 
-a.mid:not(.active) {
+a.mid:not(.active, .highlight) {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-a.high:not(.active) {
+a.high:not(.active, .highlight) {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+a.highlight:not(.active) {
+  background-color: var(--link-hover-color);
 }
 
 p {

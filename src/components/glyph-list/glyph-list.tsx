@@ -52,7 +52,12 @@ export default function GlyphList({ glyphs }: GlyphListProps) {
       : g.phonemeType === selected;
   }));
 
-  const filterSound = map(([selected, glyphs]) => glyphs.filter((g: ThaiGlyph) => selected ? selected === g.soundStart : true));
+  const filterSound = map(([selected, glyphs]) => 
+    glyphs.map((g: ThaiGlyph) => ({
+      ...g,
+      isGroup: g.soundStart === selected,
+    })
+  ));
 
   const filteredGlyphs$ = selectedFamily$.pipe(
     combineLatestWith(glyphs$),
@@ -69,6 +74,7 @@ export default function GlyphList({ glyphs }: GlyphListProps) {
 
   const handleClick = (glyph: ThaiGlyph) => {
     selectedGlyph$.next(glyph)
+    selectedSound$.next(undefined);
   }
 
   glyphs$.next(glyphs);
@@ -80,7 +86,7 @@ export default function GlyphList({ glyphs }: GlyphListProps) {
           {filteredGlyphs.map((g: ThaiGlyph) => 
             <a key={g.id}
                href={`#${g.glyph}`}
-               className={`${g.toneClass} ${selectedGlyph?.id == g.id ? 'active' : ''}`}
+               className={`${g.toneClass} ${selectedGlyph?.id == g.id ? 'active' : ''} ${g.isGroup ? 'highlight' : ''}`}
                onClick={() => handleClick(g)}
             >
               {g.glyph}
