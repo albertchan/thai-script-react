@@ -74,7 +74,7 @@ export default function GlyphList({ glyphs }: GlyphListProps) {
 
   const handleClick = (glyph: ThaiGlyph) => {
     selectedGlyph$.next(glyph)
-    selectedSound$.next(undefined);
+    // selectedSound$.next(undefined);
   }
 
   glyphs$.next(glyphs);

@@ -1,6 +1,8 @@
 .options {
   --field-height: 24px;
   --field-width: 90px;
+
+  display: flex;
   padding-bottom: 1rem;
   letter-spacing: 0.012em;
 
@@ -15,6 +17,7 @@
     justify-content: flex-start;
     align-items: center;
     min-height: var(--field-height);
+    margin-right: 1rem;
     font-size: 12px;
 
     > :first-child {
@@ -25,6 +28,11 @@
 
     select {
       min-width: var(--field-width);
+    }
+
+    button {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
     }
   }
 }

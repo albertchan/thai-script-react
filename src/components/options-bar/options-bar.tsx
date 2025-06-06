@@ -9,10 +9,15 @@ interface OptionsBarProps {
 }
 
 export default function OptionsBar({ options }: OptionsBarProps) {
-  const { selectedFamily$ } = useOptions();
+  const { selectedFamily$, selectedSound$ } = useOptions();
 
   function handleChange(selected: string) {
     selectedFamily$.next(selected)
+  }
+
+  function handleReset() {
+    selectedFamily$.next(undefined)
+    selectedSound$.next(undefined)
   }
 
   return (
@@ -24,6 +29,9 @@ export default function OptionsBar({ options }: OptionsBarProps) {
             <option key={f.id} value={f.id}>{f.name}</option>
           )}
         </select>
+      </label>
+      <label>
+        <button type="button" onClick={handleReset}>Reset</button>
       </label>
     </div>
   );
