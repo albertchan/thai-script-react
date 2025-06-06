@@ -5,6 +5,7 @@ import ThaiGlyph from "./models/thai-glyph";
 const listGlyph$ = new BehaviorSubject<ThaiGlyph[]>([]);
 const selectedGlyph$ = new BehaviorSubject<ThaiGlyph | undefined>(undefined);
 const selectedFamily$ = new BehaviorSubject<string | undefined>(undefined);
+const selectedSound$ = new BehaviorSubject<string | undefined>(undefined);
 
 const GlyphsContext = createContext({
   listGlyph$,
@@ -13,6 +14,7 @@ const GlyphsContext = createContext({
 
 const OptionsContext = createContext({
   selectedFamily$,
+  selectedSound$,
 })
 
 export const useGlyphs = () => useContext(GlyphsContext);

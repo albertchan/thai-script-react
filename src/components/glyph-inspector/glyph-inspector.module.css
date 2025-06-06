@@ -1,5 +1,4 @@
 .inspector {
-  /* --inspector-width: calc((100vw - var(--row-padding) * 2) / 2); */
   --inspector-width: calc(50vw - var(--row-padding)*2);
   --glyph-padding: 1rem;
   --toolbar-height: calc(var(--cell-size) + 1px);
@@ -57,7 +56,6 @@
     justify-content: center;
     flex-direction: column;
     flex: 1 1 auto;
-    max-width: var(--inspector-width);
     height: var(--inspector-width);
     max-height: var(--inspector-width);
     text-align: center;
@@ -65,7 +63,7 @@
     .glyph {
       padding-bottom: var(--glyph-padding);
       line-height: 1;
-      font-size: calc(1.5rem + 15vw);
+      font-size: calc(1.5rem + 10vw);
     }
 
     .name {
@@ -85,5 +83,19 @@
       font-size: 1rem;
       opacity: 0.5;
     }
+
+    .soundButton {
+      padding: 0;
+      border: none;
+      font: inherit;
+      text-decoration: underline;
+      background: transparent;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--link-hover-color);
+      }
+    }
+
   }
 }
