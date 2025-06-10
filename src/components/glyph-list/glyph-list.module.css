@@ -9,7 +9,7 @@
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(var(--cell-size), 1fr) );
     gap: var(--line-width);
-    font-size: calc(var(--cell-size) / 2);
+    font-size: calc(var(--cell-size) / 2.5);
 
     > * {
       height: var(--cell-size);

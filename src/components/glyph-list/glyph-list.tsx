@@ -32,17 +32,13 @@ export default function GlyphList({ glyphs }: GlyphListProps) {
       return true;
     }
 
-    return CONSONANT_CLASS_LIST.includes(selected)
-      ? g.toneClass === selected
-      : g.phonemeType === selected;
-  }));
-
-  const filterVowelFamily = map(([selected, glyphs]) => glyphs.filter((g: ThaiGlyph) => {
-    if (VOWEL_CLASS_LIST.includes(selected)) {
-      return g.toneClass === selected;
+    if (CONSONANT_CLASS_LIST.includes(selected)) {
+      return g.toneClass === selected; 
     }
 
-    return true;
+    if (VOWEL_CLASS_LIST.includes(selected)) {
+      return g.toneClass === selected || g.type === selected;
+    }
   }));
 
   const filterSound = map(([selected, glyphs]) => 

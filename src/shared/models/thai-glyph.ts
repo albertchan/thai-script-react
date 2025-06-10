@@ -5,6 +5,7 @@ export default interface ThaiGlyph {
   name: string;
   description: string;
   transcript: string;
+  type?: string;
   phonemeType: string;
   soundStart: string;
   soundEnd: string;
