@@ -10,10 +10,10 @@ export default function Navbar() {
         </h4>
         <div className={styles.menu}>
           <Link href="/">Home</Link>
-          <Link href="/glyphs">Glyphs</Link>
           <Link href="/consonants">Consonants</Link>
           <Link href="/vowels">Vowels</Link>
           <Link href="/tone">Tone</Link>
+          <Link href="/glyphs">Glyphs</Link>
         </div>
       </div>
     </header>

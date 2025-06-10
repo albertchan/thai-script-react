@@ -22,6 +22,8 @@
   }
 }
 
+/* Base */
+
 html,
 body {
   max-width: 100vw;
@@ -74,6 +76,8 @@ a.highlight:not(.active) {
   background-color: var(--link-hover-color);
 }
 
+/* Typography */
+
 p {
   margin-bottom: calc(var(--spacingv) * 2);
 }
@@ -98,11 +102,19 @@ h4 {
   font-size: 1.2rem;
 }
 
+li {
+  margin: 0 0 0.5rem 1rem;
+}
+
+/* Theme */
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
 }
+
+/* Layout */
 
 .page {
   width: 100%;

@@ -13,6 +13,7 @@ interface GlyphListProps {
 
 export default function GlyphList({ glyphs }: GlyphListProps) {
   const CONSONANT_CLASS_LIST = ['low', 'mid', 'high'];
+  const VOWEL_CLASS_LIST = ['diacritic', 'short', 'long', 'diphthongs', 'extra'];
   const { selectedGlyph$ } = useGlyphs();
   const { selectedFamily$, selectedSound$ } = useOptions();
   const selectedGlyph = useObservableState(selectedGlyph$);
@@ -26,22 +27,6 @@ export default function GlyphList({ glyphs }: GlyphListProps) {
 
   const glyphs$ = new BehaviorSubject<ThaiGlyph[]>([]);
 
-  // const [_filteredGlyphs] = useObservableState(() =>
-  //   selectedFamily$.pipe(
-  //     combineLatestWith(selectedSound$),
-  //     map(([selected, selectedSound]) => glyphs.filter((g) => {
-  //       if (selected === 'all' || selected === undefined) {
-  //         return true;
-  //       }
-
-  //       return CONSONANT_CLASS_LIST.includes(selected)
-  //         ? g.toneClass === selected
-  //         : g.phonemeType === selected;
-  //     })),
-  //   ),
-  //   []
-  // );
-
   const filterFamily = map(([selected, glyphs]) => glyphs.filter((g: ThaiGlyph) => {
     if (selected === 'all' || selected === undefined) {
       return true;
@@ -50,6 +35,14 @@ export default function GlyphList({ glyphs }: GlyphListProps) {
     return CONSONANT_CLASS_LIST.includes(selected)
       ? g.toneClass === selected
       : g.phonemeType === selected;
+  }));
+
+  const filterVowelFamily = map(([selected, glyphs]) => glyphs.filter((g: ThaiGlyph) => {
+    if (VOWEL_CLASS_LIST.includes(selected)) {
+      return g.toneClass === selected;
+    }
+
+    return true;
   }));
 
   const filterSound = map(([selected, glyphs]) => 
@@ -74,7 +67,6 @@ export default function GlyphList({ glyphs }: GlyphListProps) {
 
   const handleClick = (glyph: ThaiGlyph) => {
     selectedGlyph$.next(glyph)
-    // selectedSound$.next(undefined);
   }
 
   glyphs$.next(glyphs);
