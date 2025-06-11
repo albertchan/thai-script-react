@@ -28,7 +28,7 @@ export default async function Consonants() {
       </div>
       <div className={styles.glyphGrid}>
         <GlyphInspector />
-        <GlyphList glyphs={glyphs.filter((g) => g.phonemeType === "consonant")} />
+        <GlyphList glyphs={glyphs.filter((g) => g.type === "consonant")} />
       </div>
     </main>
   )

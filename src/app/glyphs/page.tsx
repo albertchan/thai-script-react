@@ -14,6 +14,7 @@ export default async function Glyphs() {
     { id: "high", name: "Consonants (High)" },
     { id: "low", name: "Consonants (Low)" },
     { id: "vowel", name: "Vowels" },
+    { id: "numerals", name: "Numerals" },
   ];
 
   return (

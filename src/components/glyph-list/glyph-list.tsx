@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect } from "react";
-import { BehaviorSubject, combineLatestWith, from, map } from "rxjs";
+import { BehaviorSubject, combineLatestWith, map } from "rxjs";
 import { useObservableState } from "observable-hooks";
 import { useGlyphs, useOptions } from "@/shared/store";
 import ThaiGlyph from "@/shared/models/thai-glyph";

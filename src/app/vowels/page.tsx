@@ -1,13 +1,16 @@
 import GlyphInspector from "@/components/glyph-inspector/glyph-inspector";
 import GlyphList from "@/components/glyph-list/glyph-list";
-import ThaiGlyph from "@/shared/models/thai-glyph";
 import OptionsBar from "@/components/options-bar/options-bar";
+import VowelTable from "@/components/vowel-table/vowel-table";
 import Option from "@/shared/models/option";
+import ThaiGlyph from "@/shared/models/thai-glyph";
 import styles from "./page.module.css";
 
 export default async function Vowels() {
   const res = await fetch("http://localhost:3000/api/vowels");
-  const glyphs: ThaiGlyph[] = await res.json();
+  const vowels: ThaiGlyph[] = await res.json();
+  const long = vowels.filter((v) => v.toneClass === 'long');
+  const short = vowels.filter((v) => v.toneClass === 'short');
   const family: Option[] = [
     { id: "all", name: "All" },
     { id: "short", name: "Short" },
@@ -27,7 +30,17 @@ export default async function Vowels() {
       </div>
       <div className={styles.glyphGrid}>
         <GlyphInspector />
-        <GlyphList glyphs={glyphs} />
+        <GlyphList glyphs={vowels} />
+      </div>
+      <div className={styles.grid}>
+        <div>
+          <h4>Short Vowels</h4>
+          <VowelTable vowels={short} />
+        </div>
+        <div>
+          <h4>Long Vowels</h4>
+          <VowelTable vowels={long} />
+        </div>
       </div>
     </main>
   )

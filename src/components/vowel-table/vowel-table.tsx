@@ -23,6 +23,5 @@ export default function VowelTable({ vowels }: VowelTableProps) {
         )}
       </tbody>
     </table>
-
   );
 }

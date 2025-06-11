@@ -7,4 +7,11 @@
   box-sizing: border-box;
   gap: var(--line-width);
   flex: 1 0 100%;
+  margin-bottom: var(--grid-gap);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  grid-gap: var(--grid-gap);
 }

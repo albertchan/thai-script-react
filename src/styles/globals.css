@@ -3,6 +3,7 @@
   --foreground: #171717;
   --link-hover-color: #FF9900;
   --font-size: 16px;
+  --font-size-glyph: 1.5rem;
   --line-height: 1.5;
   --line-width: 1px;
   --grid-color: #555;
@@ -106,6 +107,29 @@ li {
   margin: 0 0 0.5rem 1rem;
 }
 
+/* Tables */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  tr > th {
+    padding: 0.75rem 0.5rem;
+    border: var(--line-width) solid var(--foreground);
+  }
+
+  tr > td {
+    padding: 0.4rem;
+    text-align: left;
+    border: var(--line-width) solid var(--foreground);
+  }
+
+  .glyph {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
 /* Theme */
 
 @media (prefers-color-scheme: dark) {
@@ -144,4 +168,8 @@ li {
 
 .grid {
   display: grid;
+}
+
+.font-glyph {
+  font-size: var(--font-size-glyph);
 }

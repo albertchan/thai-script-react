@@ -3,6 +3,7 @@
 import { useOptions } from "@/shared/store";
 import Option from "@/shared/models/option";
 import styles from "./options-bar.module.css";
+import { useEffect } from "react";
 
 interface OptionsBarProps {
   options: Option[],
@@ -19,6 +20,10 @@ export default function OptionsBar({ options }: OptionsBarProps) {
     selectedFamily$.next(undefined)
     selectedSound$.next(undefined)
   }
+
+  useEffect(() => {
+    // router.events.on('routeChangeComplete', handleReset)
+  });
 
   return (
     <div className={styles.options}>
