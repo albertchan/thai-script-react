@@ -1,6 +1,5 @@
 "use client"
 
-import { useEffect } from "react";
 import { BehaviorSubject, combineLatestWith, map } from "rxjs";
 import { useObservableState } from "observable-hooks";
 import { useGlyphs, useOptions } from "@/shared/store";
@@ -16,18 +15,10 @@ export default function GlyphList({ glyphs }: GlyphListProps) {
   const VOWEL_CLASS_LIST = ['diacritic', 'short', 'long', 'diphthongs', 'extra'];
   const { selectedGlyph$ } = useGlyphs();
   const { selectedFamily$, selectedSound$ } = useOptions();
+  const glyphs$ = new BehaviorSubject<ThaiGlyph[]>([]);
   const selectedGlyph = useObservableState(selectedGlyph$);
 
-  // Initialize
-  useEffect(() => {
-    if (!selectedGlyph$.value) {
-      selectedGlyph$.next(glyphs[0]);
-    }
-  });
-
-  const glyphs$ = new BehaviorSubject<ThaiGlyph[]>([]);
-
-  const filterFamily = map(([selected, glyphs]) => glyphs.filter((g: ThaiGlyph) => {
+  const filterFamily = map(([glyphs, selected]) => glyphs.filter((g: ThaiGlyph) => {
     if (selected === 'all' || selected === undefined) {
       return true;
     }
@@ -41,16 +32,22 @@ export default function GlyphList({ glyphs }: GlyphListProps) {
     }
   }));
 
-  const filterSound = map(([selected, glyphs]) => 
+  const filterSound = map(([selected, glyphs]) =>
     glyphs.map((g: ThaiGlyph) => ({
       ...g,
       isGroup: g.soundStart === selected,
     })
   ));
 
-  const filteredGlyphs$ = selectedFamily$.pipe(
-    combineLatestWith(glyphs$),
+  const resetSelected = map((glyphs: ThaiGlyph[]) => {
+    selectedGlyph$.next(glyphs[0])
+    return glyphs;
+  });
+
+  const filteredGlyphs$ = glyphs$.pipe(
+    combineLatestWith(selectedFamily$),
     filterFamily,
+    resetSelected,
   );
 
   const [filteredGlyphs] = useObservableState(() =>
@@ -60,10 +57,6 @@ export default function GlyphList({ glyphs }: GlyphListProps) {
     ),
     []
   );
-
-  const handleClick = (glyph: ThaiGlyph) => {
-    selectedGlyph$.next(glyph)
-  }
 
   glyphs$.next(glyphs);
 
@@ -75,7 +68,7 @@ export default function GlyphList({ glyphs }: GlyphListProps) {
             <a key={g.id}
                href={`#${g.glyph}`}
                className={`${g.toneClass} ${selectedGlyph?.id == g.id ? 'active' : ''} ${g.isGroup ? 'highlight' : ''}`}
-               onClick={() => handleClick(g)}
+               onClick={() => selectedGlyph$.next(g)}
             >
               {g.glyph}
             </a>

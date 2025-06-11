@@ -1,6 +1,6 @@
 "use client"
 
-import { useOptions } from "@/shared/store";
+import { useGlyphs, useOptions } from "@/shared/store";
 import Option from "@/shared/models/option";
 import styles from "./options-bar.module.css";
 import { useEffect } from "react";
@@ -10,6 +10,7 @@ interface OptionsBarProps {
 }
 
 export default function OptionsBar({ options }: OptionsBarProps) {
+  const { selectedGlyphIndex$ } = useGlyphs();
   const { selectedFamily$, selectedSound$ } = useOptions();
 
   function handleChange(selected: string) {
@@ -17,6 +18,7 @@ export default function OptionsBar({ options }: OptionsBarProps) {
   }
 
   function handleReset() {
+    selectedGlyphIndex$.next(0);
     selectedFamily$.next(undefined)
     selectedSound$.next(undefined)
   }
