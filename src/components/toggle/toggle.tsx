@@ -7,24 +7,24 @@ import { useOptions } from "@/shared/store";
 
 interface ToggleProps {
   modes: ToggleMode[],
-  checked?: string,
+  mode?: string,
   size?: 'small' | 'medium' | 'large',
 }
 
-export default function Toggle({ modes = [], checked, size = "small" }: ToggleProps) {
+export default function Toggle({ modes = [], mode, size = "small" }: ToggleProps) {
   const { selectedMode$ } = useOptions();
-  const isChecked = modes.length > 0 ? checked === modes[1].label : false;
-  const [index, setIndex] = useState(checked ? modes.findIndex((m) => m.id === checked) : 0);
+  const [index, setIndex] = useState(mode ? modes.findIndex((m) => m.id === mode) : 0);
 
   function toggleChange() {
-    setIndex(index === 0 ? 1 : 0);
-    selectedMode$.next(modes[index]?.id);
+    const newIndex = index === 0 ? 1 : 0;
+    setIndex(newIndex);
+    selectedMode$.next(modes[newIndex]?.id);
   }
 
   return (
     <label className={`${styles.toggle} toggle-${size}`}>
       <span className={styles.text}>{modes[0]?.label}</span>
-      <input className={styles.input} type="checkbox" defaultChecked={isChecked} onChange={toggleChange} />
+      <input className={styles.input} type="checkbox" defaultChecked={index === 1} onChange={toggleChange} />
       <span className={styles.text}>{modes[1]?.label}</span>
     </label>
   );

@@ -5,16 +5,21 @@ import Toggle from "@/components/toggle/toggle";
 import Option from "@/shared/models/option";
 import ToggleMode from "@/shared/models/toggle-mode";
 import styles from "./options-bar.module.css";
-import { useEffect } from "react";
 
 interface OptionsBarProps {
   options: Option[],
   modes?: ToggleMode[],
+  mode?: string,
 }
 
-export default function OptionsBar({ options, modes }: OptionsBarProps) {
+export default function OptionsBar({ options, modes, mode }: OptionsBarProps) {
   const { selectedGlyphIndex$ } = useGlyphs();
-  const { selectedFamily$, selectedSound$ } = useOptions();
+  const { selectedFamily$, selectedSound$, selectedMode$ } = useOptions();
+  
+  // Set initial view mode
+  if (mode) {
+    selectedMode$.next(mode);
+  }
 
   function handleChange(selected: string) {
     selectedFamily$.next(selected)
@@ -25,10 +30,6 @@ export default function OptionsBar({ options, modes }: OptionsBarProps) {
     selectedFamily$.next(undefined)
     selectedSound$.next(undefined)
   }
-
-  useEffect(() => {
-    // router.events.on('routeChangeComplete', handleReset)
-  });
 
   return (
     <div className={styles.options}>
@@ -44,7 +45,7 @@ export default function OptionsBar({ options, modes }: OptionsBarProps) {
         <button type="button" onClick={handleReset}>Reset</button>
       </label>
       <div className={styles.modes}>
-        {modes && <Toggle modes={modes} />}
+        {modes && <Toggle modes={modes} mode={mode} />}
       </div>
     </div>
   );
