@@ -8,7 +8,14 @@ This *thing* is a [Next.js](https://nextjs.org) project bootstrapped with [`crea
 
 ## Getting Started
 
-First, run the development server:
+For local development, first create an environment variable file `.env.local` with the following content:
+
+```
+PROTOCOL_SCHEME=http://
+VERCEL_URL=localhost:3000
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev

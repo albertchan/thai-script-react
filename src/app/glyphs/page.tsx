@@ -5,7 +5,8 @@ import Option from "@/shared/models/option";
 import styles from "./page.module.css";
 
 export default async function Glyphs() {
-  const res = await fetch("http://localhost:3000/api/glyphs");
+  const baseUrl = `${process.env.PROTOCOL_SCHEME}${process.env.VERCEL_URL}`;
+  const res = await fetch(`${baseUrl}/api/glyphs`);
   const glyphs = await res.json();
   const family: Option[] = [
     { id: "all", name: "All" },
