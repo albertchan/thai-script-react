@@ -7,6 +7,7 @@ const selectedGlyph$ = new BehaviorSubject<ThaiGlyph | undefined>(undefined);
 const selectedGlyphIndex$ = new BehaviorSubject<number>(0)
 const selectedFamily$ = new BehaviorSubject<string | undefined>(undefined);
 const selectedSound$ = new BehaviorSubject<string | undefined>(undefined);
+const selectedMode$ = new BehaviorSubject<string | undefined>(undefined);
 
 const GlyphsContext = createContext({
   listGlyph$,
@@ -16,6 +17,7 @@ const GlyphsContext = createContext({
 
 const OptionsContext = createContext({
   selectedFamily$,
+  selectedMode$,
   selectedSound$,
 })
 

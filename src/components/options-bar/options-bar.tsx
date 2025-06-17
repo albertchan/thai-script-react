@@ -1,15 +1,18 @@
 "use client"
 
 import { useGlyphs, useOptions } from "@/shared/store";
+import Toggle from "@/components/toggle/toggle";
 import Option from "@/shared/models/option";
+import ToggleMode from "@/shared/models/toggle-mode";
 import styles from "./options-bar.module.css";
 import { useEffect } from "react";
 
 interface OptionsBarProps {
   options: Option[],
+  modes?: ToggleMode[],
 }
 
-export default function OptionsBar({ options }: OptionsBarProps) {
+export default function OptionsBar({ options, modes }: OptionsBarProps) {
   const { selectedGlyphIndex$ } = useGlyphs();
   const { selectedFamily$, selectedSound$ } = useOptions();
 
@@ -40,6 +43,9 @@ export default function OptionsBar({ options }: OptionsBarProps) {
       <label>
         <button type="button" onClick={handleReset}>Reset</button>
       </label>
+      <div className={styles.modes}>
+        {modes && <Toggle modes={modes} />}
+      </div>
     </div>
   );
 }

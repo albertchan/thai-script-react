@@ -1,8 +1,8 @@
-import ThaiVowel from "@/shared/models/thai-vowel";
+import ThaiGlyph from "@/shared/models/thai-glyph";
 import styles from "./vowel-table.module.css";
 
 interface VowelTableProps {
-  vowels: ThaiVowel[],
+  vowels: ThaiGlyph[],
 }
 
 export default function VowelTable({ vowels }: VowelTableProps) {
@@ -14,7 +14,7 @@ export default function VowelTable({ vowels }: VowelTableProps) {
           <th>Transcript</th>
           <th>English Approximation</th>
         </tr>
-        {vowels.map((l: ThaiVowel) =>
+        {vowels.map((l: ThaiGlyph) =>
           <tr key={l.id}>
             <td className={styles.glyph}>{l.glyph}</td>
             <td>{l.transcript}</td>

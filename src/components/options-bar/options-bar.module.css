@@ -1,8 +1,6 @@
 .options {
-  --field-height: 24px;
-  --field-width: 90px;
-
   display: flex;
+  flex-direction: row;
   padding-bottom: 1rem;
   letter-spacing: 0.012em;
 
@@ -23,7 +21,11 @@
     > :first-child {
       flex: 0 0 auto;
       text-align: left;
-      margin-right: 12px;
+      margin-right: var(--field-margin);
+    }
+
+    > :last-child {
+      margin-right: 0;
     }
 
     select {
@@ -35,4 +37,10 @@
       padding-right: 0.75rem;
     }
   }
+}
+
+.modes {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
 }
