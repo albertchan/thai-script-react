@@ -8,6 +8,7 @@ import styles from "./glyph-list.module.css";
 
 interface GlyphListProps {
   glyphs: ThaiGlyph[],
+  filter?: string,
 }
 
 export default function GlyphList({ glyphs }: GlyphListProps) {

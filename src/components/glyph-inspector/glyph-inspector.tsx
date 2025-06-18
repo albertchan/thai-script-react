@@ -1,14 +1,27 @@
 "use client"
 
+// import { useObservableState } from "observable-hooks";
+import { useEffect, useState } from "react";
 import { useGlyphs, useOptions } from "@/shared/store";
 import styles from "./glyph-inspector.module.css";
-import { useObservableState } from "observable-hooks";
 import ThaiGlyph from "@/shared/models/thai-glyph";
 
-export default function GlyphInspector() {
+interface GlyphInspectorProps {
+  selected?: ThaiGlyph,
+}
+
+export default function GlyphInspector({ selected }: GlyphInspectorProps) {
   const { selectedGlyph$ } = useGlyphs();
   const { selectedSound$ } = useOptions();
-  const glyph = useObservableState(selectedGlyph$);
+  const [glyph, setGlyph] = useState(selected);
+
+  // Initialize
+  useEffect(() => {
+    const subscription = selectedGlyph$.subscribe((g) => setGlyph(g));
+
+    return () => subscription.unsubscribe()
+  }, [selectedGlyph$]);
+  // const glyph = useObservableState(selectedGlyph$, selected);
 
   function handleSoundStartClick(glyph: ThaiGlyph | undefined) {
     if (glyph) {

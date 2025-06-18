@@ -8,11 +8,12 @@ import styles from "./options-bar.module.css";
 
 interface OptionsBarProps {
   options: Option[],
+  filter: string,
   modes?: ToggleMode[],
   mode?: string,
 }
 
-export default function OptionsBar({ options, modes, mode }: OptionsBarProps) {
+export default function OptionsBar({ options, filter, modes, mode }: OptionsBarProps) {
   const { selectedGlyphIndex$ } = useGlyphs();
   const { selectedFamily$, selectedSound$, selectedMode$ } = useOptions();
   
@@ -20,6 +21,7 @@ export default function OptionsBar({ options, modes, mode }: OptionsBarProps) {
   if (mode) {
     selectedMode$.next(mode);
   }
+  selectedFamily$.next(filter);
 
   function handleChange(selected: string) {
     selectedFamily$.next(selected)
@@ -27,7 +29,6 @@ export default function OptionsBar({ options, modes, mode }: OptionsBarProps) {
 
   function handleReset() {
     selectedGlyphIndex$.next(0);
-    selectedFamily$.next(undefined)
     selectedSound$.next(undefined)
   }
 

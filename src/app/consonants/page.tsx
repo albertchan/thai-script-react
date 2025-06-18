@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import GlyphInspector from "@/components/glyph-inspector/glyph-inspector";
 import GlyphList from "@/components/glyph-list/glyph-list";
 import ThaiGlyph from "@/shared/models/thai-glyph";
@@ -5,16 +6,33 @@ import OptionsBar from "@/components/options-bar/options-bar";
 import Option from "@/shared/models/option";
 import styles from "./page.module.css";
 
-export default async function Consonants() {
-  const family: Option[] = [
-    { id: "all", name: "All" },
-    { id: "mid", name: "Mid" },
-    { id: "high", name: "High" },
-    { id: "low", name: "Low" },
-  ];
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
+const family: Option[] = [
+  { id: "all", name: "All" },
+  { id: "mid", name: "Mid" },
+  { id: "high", name: "High" },
+  { id: "low", name: "Low" },
+];
+
+const getData = async () => {
   const baseUrl = `${process.env.PROTOCOL_SCHEME}${process.env.VERCEL_URL}`;
-  const res = await fetch(`${baseUrl}/api/glyphs`);
-  const glyphs: ThaiGlyph[] = await res.json();
+  const res = await fetch(`${baseUrl}/thai-script.json`);
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const glyphs: ThaiGlyph[] = await res.json() || [];
+  return glyphs.filter((g) => g.type === "consonant")
+};
+
+export default async function Consonants() {
+  // Initialize
+  const filter = "all";
+  const data = await getData();
+
+  if (!data) return notFound();
 
   return (
     <main className="row">
@@ -25,12 +43,12 @@ export default async function Consonants() {
         <p>To aid learning, each consonant is traditionally associated with an acrophonic Thai word that either starts with the same sound, or features it prominently. For example, the name of the letter ข is kho khai (ข ไข่), in which kho is the sound it represents, and khai (ไข่) is a word which starts with the same sound and means &quot;egg&quot;.</p>
       </div>
       <div>
-        <OptionsBar options={family} />
+        <OptionsBar options={family} filter={filter} />
       </div>
       <div className={styles.glyphGrid}>
-        <GlyphInspector />
-        <GlyphList glyphs={glyphs.filter((g) => g.type === "consonant")} />
+        <GlyphInspector selected={data[0]} />
+        <GlyphList glyphs={data} filter={filter} />
       </div>
     </main>
-  )
+  );
 }
