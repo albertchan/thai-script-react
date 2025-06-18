@@ -1,9 +1,10 @@
+import { InferGetServerSidePropsType } from "next";
 import { notFound } from "next/navigation";
 import GlyphInspector from "@/components/glyph-inspector/glyph-inspector";
 import GlyphList from "@/components/glyph-list/glyph-list";
-import ThaiGlyph from "@/shared/models/thai-glyph";
 import OptionsBar from "@/components/options-bar/options-bar";
 import Option from "@/shared/models/option";
+import ThaiGlyph from "@/shared/models/thai-glyph";
 import styles from "./page.module.css";
 
 export const dynamic = "force-dynamic";
@@ -16,23 +17,23 @@ const family: Option[] = [
   { id: "low", name: "Low" },
 ];
 
-const getData = async () => {
-  const baseUrl = `${process.env.PROTOCOL_SCHEME}${process.env.VERCEL_URL}`;
-  const res = await fetch(`${baseUrl}/thai-script.json`);
+// const getData = async () => {
+//   const baseUrl = `${process.env.PROTOCOL_SCHEME}${process.env.VERCEL_URL}`;
+//   const res = await fetch(`${baseUrl}/thai-script.json`);
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  const glyphs: ThaiGlyph[] = await res.json() || [];
-  return glyphs.filter((g) => g.type === "consonant")
-};
+//   if (!res.ok) {
+//     throw new Error("Failed to fetch data");
+//   }
+//   const glyphs: ThaiGlyph[] = await res.json() || [];
+//   return glyphs.filter((g) => g.type === "consonant")
+// };
 
 export default async function Consonants() {
+  const data: ThaiGlyph[] = await import("../../data/thai-script.json").then((res) => res.default);
+  if (!data) return notFound();
+
   // Initialize
   const filter = "all";
-  const data = await getData();
-
-  if (!data) return notFound();
 
   return (
     <main className="row">

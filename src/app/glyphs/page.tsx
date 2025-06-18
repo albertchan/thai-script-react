@@ -1,3 +1,4 @@
+import { InferGetServerSidePropsType } from "next";
 import { notFound } from "next/navigation";
 import GlyphInspector from "@/components/glyph-inspector/glyph-inspector";
 import GlyphList from "@/components/glyph-list/glyph-list";
@@ -19,19 +20,18 @@ const family: Option[] = [
   { id: "numerals", name: "Numerals" },
 ];
 
-const getData = async () => {
-  const baseUrl = `${process.env.PROTOCOL_SCHEME}${process.env.VERCEL_URL}`;
-  const res = await fetch(`${baseUrl}/thai-script.json`);
+// const getData = async () => {
+//   const baseUrl = `${process.env.PROTOCOL_SCHEME}${process.env.VERCEL_URL}`;
+//   const res = await fetch(`${baseUrl}/thai-script.json`);
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  return await res.json();
-};
+//   if (!res.ok) {
+//     throw new Error("Failed to fetch data");
+//   }
+//   return await res.json();
+// };
 
 export default async function Glyphs() {
-  const data: ThaiGlyph[] = await getData();
-
+  const data: ThaiGlyph[] = await import("../../data/thai-script.json").then((res) => res.default);
   if (!data) return notFound();
 
   // Initialize

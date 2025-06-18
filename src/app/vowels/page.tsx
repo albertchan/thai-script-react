@@ -1,3 +1,4 @@
+import { InferGetServerSidePropsType } from "next";
 import { notFound } from "next/navigation";
 import GlyphInspector from "@/components/glyph-inspector/glyph-inspector";
 import GlyphList from "@/components/glyph-list/glyph-list";
@@ -5,8 +6,8 @@ import OptionsBar from "@/components/options-bar/options-bar";
 import View from "@/components/view/view";
 import VowelTable from "@/components/vowel-table/vowel-table";
 import Option from "@/shared/models/option";
-import ThaiGlyph from "@/shared/models/thai-glyph";
 import ToggleMode from "@/shared/models/toggle-mode";
+import ThaiGlyph from "@/shared/models/thai-glyph";
 import styles from "./page.module.css";
 
 export const dynamic = "force-dynamic";
@@ -25,19 +26,18 @@ const modes: ToggleMode[] = [
   { id: 'table', label: "Table" }
 ];
 
-const getData = async () => {
-  const baseUrl = `${process.env.PROTOCOL_SCHEME}${process.env.VERCEL_URL}`;
-  const res = await fetch(`${baseUrl}/thai-vowels.json`);
+// const getData = async () => {
+//   const baseUrl = `${process.env.PROTOCOL_SCHEME}${process.env.VERCEL_URL}`;
+//   const res = await fetch(`${baseUrl}/thai-vowels.json`);
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  return await res.json();
-}
+//   if (!res.ok) {
+//     throw new Error("Failed to fetch data");
+//   }
+//   return await res.json();
+// }
 
 export default async function Vowels() {
-  const data: ThaiGlyph[] = await getData();
-    
+  const data: ThaiGlyph[] = await import("../../data/thai-vowels.json").then((res) => res.default);
   if (!data) return notFound();
 
   // Initialize
