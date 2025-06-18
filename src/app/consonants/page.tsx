@@ -1,4 +1,3 @@
-import { InferGetServerSidePropsType } from "next";
 import { notFound } from "next/navigation";
 import GlyphInspector from "@/components/glyph-inspector/glyph-inspector";
 import GlyphList from "@/components/glyph-list/glyph-list";

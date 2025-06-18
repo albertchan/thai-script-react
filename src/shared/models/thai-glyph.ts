@@ -1,6 +1,6 @@
 export default interface ThaiGlyph {
   id: number;
-  unicode: string;
+  unicode?: string;
   glyph: string;
   name: string;
   description: string;
