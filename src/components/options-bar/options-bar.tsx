@@ -29,7 +29,8 @@ export default function OptionsBar({ options, filter, modes, mode }: OptionsBarP
 
   function handleReset() {
     selectedGlyphIndex$.next(0);
-    selectedSound$.next(undefined)
+    selectedFamily$.next("all");
+    selectedSound$.next(undefined);
   }
 
   return (

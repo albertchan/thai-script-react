@@ -25,16 +25,6 @@ const modes: ToggleMode[] = [
   { id: 'table', label: "Table" }
 ];
 
-// const getData = async () => {
-//   const baseUrl = `${process.env.PROTOCOL_SCHEME}${process.env.VERCEL_URL}`;
-//   const res = await fetch(`${baseUrl}/thai-vowels.json`);
-
-//   if (!res.ok) {
-//     throw new Error("Failed to fetch data");
-//   }
-//   return await res.json();
-// }
-
 export default async function Vowels() {
   const data: ThaiGlyph[] = await import("../../data/thai-vowels.json").then((res) => res.default);
   if (!data) return notFound();
