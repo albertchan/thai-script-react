@@ -145,7 +145,6 @@ a.highlight:not(.active) {
 .table {
   display: block;
   width: 100%;
-  min-width: 40rem;
   border-collapse: collapse;
   overflow-x: auto;
 
