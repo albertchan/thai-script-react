@@ -11,7 +11,7 @@
   overflow: hidden;
   z-index: 2;
   align-items: stretch;
-  background: var(--background-color);
+  background: var(--background);
   font-size: 0.875rem;
 
   a {

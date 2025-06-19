@@ -88,10 +88,11 @@ export default async function Tone() {
           </table>
         </div>
         <div className={styles.diagram}>
-          <figure>
-            <Image src="/tones-chart-dark.svg" alt="Tone Chart" width={500} height={500} />
+          <picture>
+            <source srcSet="/tones-chart-dark.png" media="(prefers-color-scheme: dark)" />
+            <Image src="/tones-chart-light.png" alt="Tone Chart" width={500} height={500} />
             <figcaption>Fig. 1: Thai language tone chart</figcaption>
-          </figure>
+          </picture>
         </div>
       </div>
     </main>
