@@ -1,8 +1,12 @@
 .inspector {
-  --inspector-width: calc(50vw - var(--row-padding)*2);
+  --inspector-width: calc(80vw - var(--row-padding)*2);
   --glyph-padding: 1rem;
   --glyph-font-size: calc(3rem + 10vw);
   --toolbar-height: calc(var(--cell-size) + 1px);
+
+  @media (width >= 40rem) {
+    --inspector-width: calc(50vw - var(--row-padding)*2);
+  }
 
   position: sticky;
   display: grid;
@@ -49,53 +53,55 @@
     font-style: italic;
   }
 
-  .canvas {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex: 1 1 auto;
-    height: var(--inspector-width);
-    max-height: calc((var(--row-max-width) - var(--row-padding) * 2) / 2);
-    text-align: center;
+}
 
-    .glyph {
-      padding-bottom: var(--glyph-padding);
-      line-height: 1;
-      font-size: calc(1.2rem + 8vw);
+.canvas {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 15rem;
+  max-height: calc((var(--row-max-width) - var(--row-padding) * 2) / 2);
+  height: var(--inspector-width);
+  text-align: center;
+
+  .glyph {
+    padding-bottom: var(--glyph-padding);
+    line-height: 1;
+    font-size: calc(1.2rem + 8vw);
+  }
+
+  .name {
+    font-size: 1.75rem;
+  }
+
+  .transcript {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+
+  .toneClass {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    opacity: 0.5;
+  }
+
+  .soundButton {
+    padding: 0;
+    border: none;
+    font: inherit;
+    text-decoration: underline;
+    background: transparent;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--link-hover-color);
     }
-
-    .name {
-      font-size: 1.75rem;
-    }
-
-    .transcript {
-      font-size: 1.25rem;
-      font-weight: 300;
-    }
-
-    .toneClass {
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 1rem;
-      font-size: 1rem;
-      opacity: 0.5;
-    }
-
-    .soundButton {
-      padding: 0;
-      border: none;
-      font: inherit;
-      text-decoration: underline;
-      background: transparent;
-      cursor: pointer;
-
-      &:hover {
-        color: var(--link-hover-color);
-      }
-    }
-
   }
 }
+

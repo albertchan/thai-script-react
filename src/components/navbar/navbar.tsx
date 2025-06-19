@@ -5,11 +5,10 @@ export default function Navbar() {
   return (
     <header className={styles.header}>
       <div>
-        <h4 className={styles.scrollReveal}>
-          <a>learn-thai-script</a>
-        </h4>
+        <h1 className={styles.logo}>
+          <Link href="/">อักษรไทย</Link>
+        </h1>
         <div className={styles.menu}>
-          <Link href="/">Home</Link>
           <Link href="/consonants">Consonants</Link>
           <Link href="/vowels">Vowels</Link>
           <Link href="/tone">Tone</Link>
