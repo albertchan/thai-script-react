@@ -9,7 +9,7 @@ export default function Home() {
           <div>
             <h2 className={styles.subTitle}>Motivation</h2>
             <p>I want to learn Thai because I like Thai girls.</p>
-            <p>In order to improve my Thai language skills, I figured I should learn to read and write Thai. Reading Thai requires learning the Thai script or alphabet. There are wonderful tools and apps for learning the Thai script but most of them have shitty user experiences. That&apos;s why I&apos;ve made my own: this site.</p>
+            <p>In order to improve my Thai language skills, I figured I should learn to read and write Thai. Reading Thai requires learning the Thai script or alphabet. There are wonderful tools and apps for learning the Thai script but most of them have awful user experiences. That&apos;s why I&apos;ve made my own: this site.</p>
             <p>I created Learn Thai Script mostly for my own benefit but I guess it could help other Thai learners as well. The focus here is to study the Thai script. It&apos;s not a complete solution for learning how to speak Thai. Learning a language also requires knowing the culture, vocabulary, grammar, and pronunciation. Some of these aspects are provided here in small doses.</p>
             <h2 className={styles.subTitle}>Thai Script อักษรไทย</h2>
             <p>The Thai script or alphabet gives full information on the tones. Tones are realised in the vowels, but indicated in the script by a combination of the class of the initial consonant (high, mid or low), vowel length (long or short), closing consonant (plosive or sonorant, called dead or live) and, if present, one of four tone marks.</p>
