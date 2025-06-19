@@ -35,6 +35,8 @@ export default async function Vowels() {
     <main className="row">
       <div>
         <h2>Vowels</h2>
+      </div>
+      <div className="sm-order-last">
         <p>Thai vowel sounds and diphthongs are written using a mixture of vowel symbols on a consonant base. Each vowel is shown in its correct position relative to a base consonant and sometimes a final consonant as well. Vowels can go above, below, left of or right of the consonant, or combinations of these places. If a vowel has parts before and after the initial consonant, and the syllable starts with a consonant cluster, the split will go around the whole cluster.</p>
       </div>
       <div>
