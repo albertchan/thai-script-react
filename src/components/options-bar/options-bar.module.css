@@ -1,0 +1,46 @@
+.options {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1rem;
+  letter-spacing: 0.012em;
+
+  > * {
+    line-height: 18px;
+  }
+
+  label {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: var(--field-height);
+    margin-right: 1rem;
+    font-size: 12px;
+
+    > :first-child {
+      flex: 0 0 auto;
+      text-align: left;
+      margin-right: var(--field-margin);
+    }
+
+    > :last-child {
+      margin-right: 0;
+    }
+
+    select {
+      min-width: var(--field-width);
+    }
+
+    button {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+  }
+}
+
+.modes {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}

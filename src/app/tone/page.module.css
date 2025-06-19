@@ -1,0 +1,22 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  grid-gap: var(--grid-gap);
+}
+
+.diagram {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  > img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  figcaption {
+    font-size: 0.875rem;
+  }
+}
