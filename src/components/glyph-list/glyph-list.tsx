@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useObservableState } from "observable-hooks";
 import { useGlyphs, useOptions } from "@/shared/store";
+import { CONSONANTS_FAMILY, OTHERS_FAMILY, DEFAULT_OPTION } from "@/shared/constants";
 import ThaiGlyph from "@/shared/models/thai-glyph";
 import styles from "./glyph-list.module.css";
 
@@ -12,9 +13,6 @@ interface GlyphListProps {
 }
 
 export default function GlyphList({ glyphs, filter }: GlyphListProps) {
-  const CONSONANT_CLASS_LIST = ['low', 'mid', 'high'];
-  const OTHERS_CLASS_LIST = ['diacritic', 'short', 'long', 'diphthongs', 'extra', 'numeral', 'consonant', 'vowel'];
-
   const { selectedGlyph$ } = useGlyphs();
   const { selectedFamily$, selectedSound$ } = useOptions();
   const selected = useObservableState(selectedFamily$, filter);
@@ -24,15 +22,15 @@ export default function GlyphList({ glyphs, filter }: GlyphListProps) {
 
   useEffect(() => {
     const _glyphs = glyphs.filter((g) => {
-      if (selected === 'all' || selected === undefined) {
+      if (selected === DEFAULT_OPTION || selected === undefined) {
         return true;
       }
 
-      if (CONSONANT_CLASS_LIST.includes(selected)) {
+      if (CONSONANTS_FAMILY.includes(selected)) {
         return g.toneClass === selected; 
       }
 
-      if (OTHERS_CLASS_LIST.includes(selected)) {
+      if (OTHERS_FAMILY.includes(selected)) {
         return g.toneClass === selected || g.type === selected;
       }
     });
