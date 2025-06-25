@@ -77,6 +77,26 @@
     font-size: 1.75rem;
   }
 
+  .soundButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    cursor: pointer;
+
+    svg {
+      width: var(--icon-size);
+      height: var(--icon-size);
+      color: var(--foreground);
+      fill: var(--foreground);
+    }
+
+    &:hover > svg {
+      color: var(--link-hover-color);
+      fill: var(--link-hover-color);
+    }
+  }
+
   .transcript {
     font-size: 1.25rem;
     font-weight: 300;
@@ -91,7 +111,7 @@
     opacity: 0.5;
   }
 
-  .soundButton {
+  .toneButton {
     padding: 0;
     border: none;
     font: inherit;

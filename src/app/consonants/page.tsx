@@ -7,8 +7,10 @@ import { DEFAULT_OPTION, OPTIONS_CONSONANT } from "@/shared/constants";
 import styles from "./page.module.css";
 
 export default async function Consonants() {
-  const data: ThaiGlyph[] = await import("../../data/thai-script.json").then((res) => res.default);
-  if (!data) return notFound();
+  const res: ThaiGlyph[] = await import("../../data/thai-script.json").then((res) => res.default);
+  if (!res) return notFound();
+
+  const data = res.filter((g) => g.type === "consonant");
 
   return (
     <main className="row">

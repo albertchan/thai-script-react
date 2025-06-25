@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useObservableState } from "observable-hooks";
 import { useGlyphs, useOptions } from "@/shared/store";
 import { CONSONANTS_FAMILY, OTHERS_FAMILY, DEFAULT_OPTION } from "@/shared/constants";
@@ -13,15 +13,16 @@ interface GlyphListProps {
 }
 
 export default function GlyphList({ glyphs, filter }: GlyphListProps) {
+  const glyphsRef = useRef(glyphs);
   const { selectedGlyph$ } = useGlyphs();
   const { selectedFamily$, selectedSound$ } = useOptions();
   const selected = useObservableState(selectedFamily$, filter);
-  const selectedSound = useObservableState(selectedSound$);
   const selectedGlyph = useObservableState(selectedGlyph$);
+  const selectedSound = useObservableState(selectedSound$);
   const [filteredGlyphs, setFilteredGlyphs] = useState(glyphs);
 
   useEffect(() => {
-    const _glyphs = glyphs.filter((g) => {
+    const _glyphs = glyphsRef.current.filter((g) => {
       if (selected === DEFAULT_OPTION || selected === undefined) {
         return true;
       }
@@ -40,7 +41,7 @@ export default function GlyphList({ glyphs, filter }: GlyphListProps) {
       isGroup: g.soundStart === selectedSound,
     })));
     selectedGlyph$.next(_glyphs[0]);
-  }, [selected, selectedSound]);
+  }, [selected, selectedSound, selectedGlyph$]);
 
   return (
     <div className={styles.glyphList}>

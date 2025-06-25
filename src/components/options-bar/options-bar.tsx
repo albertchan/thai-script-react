@@ -5,8 +5,8 @@ import Toggle from "@/components/toggle/toggle";
 import Option from "@/shared/models/option";
 import ToggleMode from "@/shared/models/toggle-mode";
 import styles from "./options-bar.module.css";
-import { useEffect } from "react";
 import { useObservableState } from "observable-hooks";
+import { DEFAULT_VIEW_MODE } from "@/shared/constants";
 
 interface OptionsBarProps {
   options: Option[],
@@ -21,17 +21,7 @@ export default function OptionsBar({ options, filter, modes, mode }: OptionsBarP
   const selectedFamily = useObservableState(selectedFamily$, filter);
   
   // Set initial view mode
-  useEffect(() => {
-    if (mode) {
-      selectedMode$.next(mode);
-    } else {
-      selectedMode$.next("grid");
-    }
-  }, []);
-
-  useEffect(() => {
-    selectedFamily$.next(filter);
-  }, [filter])
+  selectedMode$.next(mode || DEFAULT_VIEW_MODE);
 
   function handleChange(selected: string) {
     selectedFamily$.next(selected)

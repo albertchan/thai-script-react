@@ -1,6 +1,4 @@
 :root {
-  --background: #F3F1ED;
-  --foreground: #171717;
   --black  :    #282828;
   --red    :    #EE5396;
   --green  :    #25be6a;
@@ -11,11 +9,13 @@
   --white  :    #dfdfe0;
   --orange :    #F4A261;
   --pink   :    #FF7EB6;
-
+  --background: #F3F1ED;
+  --foreground: #171717;
   --foreground-alt: #171717;
   --link-hover-color: #FF9900;
   --font-size: 16px;
   --font-size-glyph: 1.5rem;
+  --icon-size: 24px;
   --line-height: 1.5;
   --line-width: 1px;
   --grid-color: #555;
