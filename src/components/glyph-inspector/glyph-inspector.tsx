@@ -2,8 +2,9 @@
 
 import { useObservableState } from "observable-hooks";
 import { useGlyphs, useOptions } from "@/shared/store";
-import styles from "./glyph-inspector.module.css";
 import ThaiGlyph from "@/shared/models/thai-glyph";
+import Sound from "../sound/sound";
+import styles from "./glyph-inspector.module.css";
 
 interface GlyphInspectorProps {
   selected?: ThaiGlyph,
@@ -35,10 +36,13 @@ export default function GlyphInspector({ selected }: GlyphInspectorProps) {
         </div>
       </div>
       <div className={styles.canvas}>
+        <div className={styles.soundButton}>
+          <Sound src={glyph?.url} />
+        </div>
         <div className={styles.toneClass}>
           <div className={styles.tone}>{glyph?.toneClass}</div> 
           <div className={styles.sound}>
-            <button type="button" className={styles.soundButton} onClick={() => handleSoundStartClick(glyph)}>{glyph?.soundStart}</button>
+            <button type="button" className={styles.toneButton} onClick={() => handleSoundStartClick(glyph)}>{glyph?.soundStart}</button>
             {glyph?.soundEnd ? `, ${glyph.soundEnd}` : ''}
           </div> 
         </div>

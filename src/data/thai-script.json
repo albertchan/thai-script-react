@@ -10,7 +10,7 @@
     "soundStart": "k",
     "soundEnd": "k",
     "toneClass": "mid",
-    "url": "",
+    "url": "/audio/1.mp3",
     "data": {}
   },
   {
@@ -24,7 +24,7 @@
     "soundStart": "kh",
     "soundEnd": "k",
     "toneClass": "high",
-    "url": "",
+    "url": "/audio/2.mp3",
     "data": {}
   },
   {
@@ -38,7 +38,7 @@
     "soundStart": "kh",
     "soundEnd": "k",
     "toneClass": "high",
-    "url": "",
+    "url": "/audio/3.mp3",
     "data": {}
   },
   {
@@ -52,7 +52,7 @@
     "soundStart": "kh",
     "soundEnd": "k",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/4.mp3",
     "data": {}
   },
   {
@@ -66,7 +66,7 @@
     "soundStart": "kh",
     "soundEnd": "k",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/5.mp3",
     "data": {}
   },
   {
@@ -80,7 +80,7 @@
     "soundStart": "kh",
     "soundEnd": "k",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/6.mp3",
     "data": {}
   },
   {
@@ -94,7 +94,7 @@
     "soundStart": "ng",
     "soundEnd": "ng",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/7.mp3",
     "data": {}
   },
   {
@@ -108,7 +108,7 @@
     "soundStart": "ch",
     "soundEnd": "t",
     "toneClass": "mid",
-    "url": "",
+    "url": "/audio/8.mp3",
     "data": {}
   },
   {
@@ -122,7 +122,7 @@
     "soundStart": "ch",
     "soundEnd": "-",
     "toneClass": "high",
-    "url": "",
+    "url": "/audio/9.mp3",
     "data": {}
   },
   {
@@ -136,7 +136,7 @@
     "soundStart": "ch",
     "soundEnd": "t",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/10.mp3",
     "data": {}
   },
   {
@@ -150,7 +150,7 @@
     "soundStart": "s",
     "soundEnd": "t",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/11.mp3",
     "data": {}
   },
   {
@@ -164,7 +164,7 @@
     "soundStart": "ch",
     "soundEnd": "t",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/12.mp3",
     "data": {}
   },
   {
@@ -178,7 +178,7 @@
     "soundStart": "y",
     "soundEnd": "n",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/13.mp3",
     "data": {}
   },
   {
@@ -192,7 +192,7 @@
     "soundStart": "d",
     "soundEnd": "t",
     "toneClass": "mid",
-    "url": "",
+    "url": "/audio/14.mp3",
     "data": {}
   },
   {
@@ -206,7 +206,7 @@
     "soundStart": "t",
     "soundEnd": "t",
     "toneClass": "mid",
-    "url": "",
+    "url": "/audio/15.mp3",
     "data": {}
   },
   {
@@ -220,7 +220,7 @@
     "soundStart": "th",
     "soundEnd": "t",
     "toneClass": "high",
-    "url": "",
+    "url": "/audio/16.mp3",
     "data": {}
   },
   {
@@ -234,7 +234,7 @@
     "soundStart": "th or d",
     "soundEnd": "t",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/17.mp3",
     "data": {}
   },
   {
@@ -248,7 +248,7 @@
     "soundStart": "th",
     "soundEnd": "t",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/18.mp3",
     "data": {}
   },
   {
@@ -256,13 +256,13 @@
     "unicode": "U+0E13",
     "glyph": "ณ",
     "name": "ณ เณร",
-    "description": "samanera",
+    "description": "novice monk",
     "transcript": "no nen",
     "type": "consonant",
     "soundStart": "n",
     "soundEnd": "n",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/19.mp3",
     "data": {}
   },
   {
@@ -276,7 +276,7 @@
     "soundStart": "d",
     "soundEnd": "t",
     "toneClass": "mid",
-    "url": "",
+    "url": "/audio/20.mp3",
     "data": {}
   },
   {
@@ -290,7 +290,7 @@
     "soundStart": "t",
     "soundEnd": "t",
     "toneClass": "mid",
-    "url": "",
+    "url": "/audio/21.mp3",
     "data": {}
   },
   {
@@ -304,7 +304,7 @@
     "soundStart": "th",
     "soundEnd": "t",
     "toneClass": "high",
-    "url": "",
+    "url": "/audio/22.mp3",
     "data": {}
   },
   {
@@ -318,7 +318,7 @@
     "soundStart": "th",
     "soundEnd": "t",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/23.mp3",
     "data": {}
   },
   {
@@ -332,7 +332,7 @@
     "soundStart": "th",
     "soundEnd": "t",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/24.mp3",
     "data": {}
   },
   {
@@ -346,7 +346,7 @@
     "soundStart": "n",
     "soundEnd": "n",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/25.mp3",
     "data": {}
   },
   {
@@ -360,7 +360,7 @@
     "soundStart": "b",
     "soundEnd": "p",
     "toneClass": "mid",
-    "url": "",
+    "url": "/audio/26.mp3",
     "data": {}
   },
   {
@@ -374,7 +374,7 @@
     "soundStart": "p",
     "soundEnd": "p",
     "toneClass": "mid",
-    "url": "",
+    "url": "/audio/27.mp3",
     "data": {}
   },
   {
@@ -388,7 +388,7 @@
     "soundStart": "ph",
     "soundEnd": "-",
     "toneClass": "high",
-    "url": "",
+    "url": "/audio/28.mp3",
     "data": {}
   },
   {
@@ -402,7 +402,7 @@
     "soundStart": "f",
     "soundEnd": "-",
     "toneClass": "high",
-    "url": "",
+    "url": "/audio/29.mp3",
     "data": {}
   },
   {
@@ -410,13 +410,13 @@
     "unicode": "U+0E1E",
     "glyph": "พ",
     "name": "พ พาน",
-    "description": "phan",
+    "description": "offering tray",
     "transcript": "pho phan",
     "type": "consonant",
     "soundStart": "ph",
     "soundEnd": "p",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/30.mp3",
     "data": {}
   },
   {
@@ -430,7 +430,7 @@
     "soundStart": "f",
     "soundEnd": "p",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/31.mp3",
     "data": {}
   },
   {
@@ -444,7 +444,7 @@
     "soundStart": "ph",
     "soundEnd": "p",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/32.mp3",
     "data": {}
   },
   {
@@ -458,7 +458,7 @@
     "soundStart": "m",
     "soundEnd": "m",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/33.mp3",
     "data": {}
   },
   {
@@ -472,7 +472,7 @@
     "soundStart": "y",
     "soundEnd": "- or n",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/34.mp3",
     "data": {}
   },
   {
@@ -486,7 +486,7 @@
     "soundStart": "r",
     "soundEnd": "n",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/35.mp3",
     "data": {}
   },
   {
@@ -500,7 +500,7 @@
     "soundStart": "l",
     "soundEnd": "n",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/36.mp3",
     "data": {}
   },
   {
@@ -514,7 +514,7 @@
     "soundStart": "w",
     "soundEnd": "-",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/37.mp3",
     "data": {}
   },
   {
@@ -522,13 +522,13 @@
     "unicode": "U+0E28",
     "glyph": "ศ",
     "name": "ศ ศาลา",
-    "description": "pavilion, sala",
+    "description": "pavilion, gazebo",
     "transcript": "so sala",
     "type": "consonant",
     "soundStart": "s",
     "soundEnd": "t",
     "toneClass": "high",
-    "url": "",
+    "url": "/audio/38.mp3",
     "data": {}
   },
   {
@@ -542,7 +542,7 @@
     "soundStart": "s",
     "soundEnd": "t",
     "toneClass": "high",
-    "url": "",
+    "url": "/audio/39.mp3",
     "data": {}
   },
   {
@@ -556,7 +556,7 @@
     "soundStart": "s",
     "soundEnd": "t",
     "toneClass": "high",
-    "url": "",
+    "url": "/audio/40.mp3",
     "data": {}
   },
   {
@@ -570,7 +570,7 @@
     "soundStart": "h",
     "soundEnd": "-",
     "toneClass": "high",
-    "url": "",
+    "url": "/audio/41.mp3",
     "data": {}
   },
   {
@@ -584,7 +584,7 @@
     "soundStart": "l",
     "soundEnd": "n",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/42.mp3",
     "data": {}
   },
   {
@@ -598,7 +598,7 @@
     "soundStart": "-",
     "soundEnd": "-",
     "toneClass": "mid",
-    "url": "",
+    "url": "/audio/43.mp3",
     "data": {}
   },
   {
@@ -612,7 +612,7 @@
     "soundStart": "h",
     "soundEnd": "-",
     "toneClass": "low",
-    "url": "",
+    "url": "/audio/44.mp3",
     "data": {}
   },
   {
@@ -626,7 +626,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {
       "sort": {
         "vowel": 1
@@ -644,7 +644,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {
       "sort": {
         "vowel": 2
@@ -662,7 +662,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {
       "sort": {
         "vowel": 3
@@ -680,7 +680,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -694,7 +694,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {
       "sort": {
         "vowel": 0
@@ -712,7 +712,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -726,7 +726,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -740,7 +740,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -754,7 +754,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -768,7 +768,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -782,7 +782,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -796,7 +796,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -810,7 +810,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -824,7 +824,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -838,7 +838,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -852,7 +852,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -866,7 +866,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -880,7 +880,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -894,7 +894,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -908,7 +908,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -922,7 +922,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -936,7 +936,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -950,7 +950,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -964,7 +964,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -978,7 +978,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -992,7 +992,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -1006,7 +1006,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -1020,7 +1020,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -1034,7 +1034,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   },
   {
@@ -1048,7 +1048,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "",
-    "url": "",
+    "url": "/audio/x.mp3",
     "data": {}
   }
 ]

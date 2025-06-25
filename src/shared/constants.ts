@@ -18,6 +18,8 @@ export const OTHERS_FAMILY = [
   'vowel',
 ];
 
+export const DEFAULT_VIEW_MODE = "grid";
+
 export const DEFAULT_OPTION = "all";
 
 export const OPTIONS_CONSONANT: Option[] = [
