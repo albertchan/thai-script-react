@@ -1,12 +1,13 @@
 "use client"
 
+import { useEffect, useRef } from "react";
 import { useGlyphs, useOptions } from "@/shared/store";
 import Toggle from "@/components/toggle/toggle";
 import Option from "@/shared/models/option";
 import ToggleMode from "@/shared/models/toggle-mode";
-import styles from "./options-bar.module.css";
 import { useObservableState } from "observable-hooks";
 import { DEFAULT_VIEW_MODE } from "@/shared/constants";
+import styles from "./options-bar.module.css";
 
 interface OptionsBarProps {
   options: Option[],
@@ -16,12 +17,17 @@ interface OptionsBarProps {
 }
 
 export default function OptionsBar({ options, filter, modes, mode }: OptionsBarProps) {
+  const filterRef = useRef(filter);
   const { selectedGlyphIndex$ } = useGlyphs();
   const { selectedFamily$, selectedSound$, selectedMode$ } = useOptions();
   const selectedFamily = useObservableState(selectedFamily$, filter);
   
-  // Set initial view mode
+  // Initialize
   selectedMode$.next(mode || DEFAULT_VIEW_MODE);
+
+  useEffect(() => {
+    selectedFamily$.next(filterRef.current);
+  }, [selectedFamily$]);
 
   function handleChange(selected: string) {
     selectedFamily$.next(selected)
