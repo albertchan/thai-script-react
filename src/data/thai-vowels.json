@@ -9,12 +9,12 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/1.mp3",
     "data": {}
   }, 
   {
     "id": 2,
-    "glyph": " ั",
+    "glyph": " ั◌",
     "name": "สระอิ, sara i",
     "description": "c_o_me, u in \"nut\"",
     "transcript": "[a], a",
@@ -22,7 +22,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/1.mp3",
     "data": {}
   }, 
   {
@@ -35,7 +35,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/2.mp3",
     "data": {}
   }, 
   {
@@ -48,7 +48,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/14.mp3",
     "data": {}
   }, 
   {
@@ -61,7 +61,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/15.mp3",
     "data": {}
   }, 
   {
@@ -74,7 +74,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/16.mp3",
     "data": {}
   }, 
   {
@@ -100,7 +100,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/17.mp3",
     "data": {}
   }, 
   {
@@ -113,7 +113,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/18.mp3",
     "data": {}
   }, 
   {
@@ -126,7 +126,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/19.mp3",
     "data": {}
   }, 
   {
@@ -139,7 +139,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/8.mp3",
     "data": {}
   }, 
   {
@@ -152,7 +152,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/8.mp3",
     "data": {}
   },
   {
@@ -165,7 +165,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/9.mp3",
     "data": {}
   },
   {
@@ -178,7 +178,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/3.mp3",
     "data": {}
   },
   {
@@ -191,7 +191,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/3.mp3",
     "data": {}
   },
   {
@@ -204,12 +204,12 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/4.mp3",
     "data": {}
   },
   {
     "id": 17,
-    "glyph": "ไ◌ะ",
+    "glyph": "โ◌ะ",
     "name": "",
     "description": "b_oa_t",
     "transcript": "[o], o",
@@ -217,12 +217,12 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/12.mp3",
     "data": {}
   },
   {
     "id": 18,
-    "glyph": "ไ◌",
+    "glyph": "โ◌",
     "name": "",
     "description": "g_o_",
     "transcript": "[oː], o",
@@ -230,7 +230,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/13.mp3",
     "data": {}
   },
   {
@@ -243,7 +243,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/5.mp3",
     "data": {}
   },
   {
@@ -263,13 +263,13 @@
     "id": 21,
     "glyph": "◌อ",
     "name": "",
-    "description": "g_o_",
+    "description": "aw in \"saw\"",
     "transcript": "[ɔː], o",
     "type": "diphthong",
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/7.mp3",
     "data": {}
   },
   {
@@ -295,7 +295,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/10.mp3",
     "data": {}
   },
   {
@@ -308,7 +308,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/11.mp3",
     "data": {}
   },
   {
@@ -334,7 +334,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/20.mp3",
     "data": {}
   },
   {
@@ -342,17 +342,17 @@
     "glyph": "เ ีย",
     "name": "",
     "description": "med_ia_",
-    "transcript": "[ia], ia",
+    "transcript": "[ia], iia",
     "type": "diphthongs",
     "soundStart": "",
     "soundEnd": "",
-    "toneClass": "short",
-    "url": "",
+    "toneClass": "long",
+    "url": "/audio/vowels/21.mp3",
     "data": {}
   },
   {
     "id": 28,
-    "glyph": "เ ีอะ",
+    "glyph": "เ◌ือะ",
     "name": "",
     "description": "ure in \"pure\"",
     "transcript": "[ɯaʔ], uea",
@@ -360,7 +360,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/22.mp3",
     "data": {}
   },
   {
@@ -373,7 +373,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/63.mp3",
     "data": {}
   },
   {
@@ -386,7 +386,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/25.mp3",
     "data": {}
   },
   {
@@ -399,7 +399,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/25.mp3",
     "data": {}
   },
   {
@@ -412,7 +412,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/46.mp3",
     "data": {}
   },
   {
@@ -425,7 +425,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/44.mp3",
     "data": {}
   },
   {
@@ -438,7 +438,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/45.mp3",
     "data": {}
   },
   {
@@ -451,7 +451,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/42.mp3",
     "data": {}
   },
   {
@@ -477,7 +477,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/40.mp3",
     "data": {}
   },
   {
@@ -490,7 +490,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/47.mp3",
     "data": {}
   },
   {
@@ -503,7 +503,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/28.mp3",
     "data": {}
   },
   {
@@ -516,7 +516,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/27.mp3",
     "data": {}
   },
   {
@@ -529,7 +529,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/26.mp3",
     "data": {}
   },
   {
@@ -542,7 +542,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/29.mp3",
     "data": {}
   },
   {
@@ -555,7 +555,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/30.mp3",
     "data": {}
   },
   {
@@ -581,7 +581,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/33.mp3",
     "data": {}
   },
   {
@@ -594,7 +594,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/37.mp3",
     "data": {}
   },
   {
@@ -607,7 +607,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/36.mp3",
     "data": {}
   },
   {
@@ -620,7 +620,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/48.mp3",
     "data": {}
   },
   {
@@ -633,7 +633,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "short",
-    "url": "",
+    "url": "/audio/vowels/49.mp3",
     "data": {}
   },
   {
@@ -646,7 +646,7 @@
     "soundStart": "",
     "soundEnd": "",
     "toneClass": "long",
-    "url": "",
+    "url": "/audio/vowels/50.mp3",
     "data": {}
   },
   {
