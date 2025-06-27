@@ -11,7 +11,7 @@ export const OTHERS_FAMILY = [
   'diacritic',
   'short',
   'long',
-  'diphthongs',
+  'diphthong',
   'extra',
   'numeral',
   'consonant',
@@ -33,7 +33,8 @@ export const OPTIONS_VOWEL: Option[] = [
   { id: "all", name: "All" },
   { id: "short", name: "Short" },
   { id: "long", name: "Long" },
-  { id: "diphthongs", name: "Diphthongs" },
+  { id: "diacritic", name: "Diacritics" },
+  { id: "diphthong", name: "Diphthongs" },
   { id: "extra", name: "Extra" },
 ];
 

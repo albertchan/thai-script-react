@@ -17,13 +17,16 @@ interface OptionsBarProps {
 }
 
 export default function OptionsBar({ options, filter, modes, mode }: OptionsBarProps) {
+  const modeRef = useRef(mode);
   const filterRef = useRef(filter);
   const { selectedGlyphIndex$ } = useGlyphs();
   const { selectedFamily$, selectedSound$, selectedMode$ } = useOptions();
   const selectedFamily = useObservableState(selectedFamily$, filter);
   
   // Initialize
-  selectedMode$.next(mode || DEFAULT_VIEW_MODE);
+  useEffect(() => {
+    selectedMode$.next(modeRef.current || DEFAULT_VIEW_MODE);
+  }, [selectedMode$])
 
   useEffect(() => {
     selectedFamily$.next(filterRef.current);
